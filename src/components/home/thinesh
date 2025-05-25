@@ -1,0 +1,11 @@
+n=int(input("enter a number:"));
+if n>=100 && n<=999:
+   for i in range(n):
+      n=n/10;
+      n=10/n;
+      n=1;
+      a=n*n*n;
+      b=a;
+      if a==b:
+        print(n,"is a palindrome number");
+
