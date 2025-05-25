@@ -1,18 +1,24 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 const Contact: React.FC = () => {
     return (
         <>
-            <div className="container mx-auto py-16 px-4">
-                <div className="max-w-4xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <section className="bg-gradient-to-r from-blue-50 to-indigo-100 py-20 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="container mx-auto px-6"
+                >
+                    <h1 className="text-5xl font-bold text-gray-900 mb-4">
                         Explore Courses in Australia
                     </h1>
-                    <p className="text-xl text-gray-600">
+                    <p className="text-xl text-gray-700 max-w-2xl mx-auto">
                         Discover thousands of undergraduate, postgraduate, and research programs offered by Australian universities.
                     </p>
-                </div>
-            </div>
+                </motion.div>
+            </section>
             <div className="container mx-auto px-4 py-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 

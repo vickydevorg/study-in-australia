@@ -1,16 +1,73 @@
-import React from 'react';
-import { CalendarDays, UserCheck, FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck } from 'lucide-react';
-import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
-import { Tab } from '@headlessui/react';
+import React, { useState } from 'react';
+import { ThermometerSun, Building2, BusFront, CarFront } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { universitiesperth } from "../data/universities";
 
 const Perth: React.FC = () => {
+    const [expanded, setExpanded] = useState(null);
+    const toggle = (index: any) => {
+    setExpanded(expanded === index ? null : index);
+    };
     React.useEffect(() => {
         document.title = 'Student Visa Information | Study in Australia';
     }, []);
 
+    const infoData = [
+        {
+            title: "Climate",
+            icon: <ThermometerSun className="w-5 h-5 text-primary-600" />,
+            content:
+                "Mediterranean climate – hot, dry summers (Dec–Feb, 25–35°C) and mild, wet winters (Jun–Aug, 8–18°C). Low humidity, lots of sunshine (3,000+ hours/year). Occasional heatwaves in summer (can exceed 40°C).",
+        },
+        {
+            title: "Working Culture",
+            icon: <Building2 className="w-5 h-5 text-primary-600" />,
+            content:
+                "Relaxed and outdoorsy – work-life balance is valued. Mining, construction, and resources dominate (FIFO work common). Business casual (shorts acceptable in some industries). Workweek typically 8:30 AM–5 PM, with flexible arrangements in corporate jobs.",
+        },
+        {
+            title: "Public Transport",
+            icon: <BusFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Modes: Trains, buses, ferries (limited). Managed by{" "}
+                        <strong>Transperth</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Trains: 6 lines (mostly radial from CBD).</li>
+                        <li>Buses: Extensive, including high-frequency CAT buses.</li>
+                        <li>Ferry: Swan River ferry (Barrack St to South Perth).</li>
+                        <li>Smart Card: <strong>SmartRider</strong> (discounted fares).</li>
+                        <li>Coverage: Good in inner/middle suburbs, weaker in outer areas.</li>
+                        <li>Pros: Reliable, clean, free transit zone in CBD.</li>
+                        <li>Cons: Limited night services, no trams.</li>
+                    </ul>
+                </>
+            ),
+        },
+        {
+            title: "Driving & License Info",
+            icon: <CarFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Licensing handled by <strong>Department of Transport (DoT)</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Learner’s Permit (16+): Pass a theory and eyesight test.</li>
+                        <li>Hazard Perception Test (HPT): After 6 months (if under 25).</li>
+                        <li>Practical Driving Test: 50+ supervised hours (25 at night) if under 25.</li>
+                        <li>P1 License (Red P): Must be at least 17, valid for 1 year.</li>
+                        <li>P2 License (Green P): Valid for 2 years.</li>
+                        <li>Full License: Granted after completing P2.</li>
+                        <li>Overseas license holders may need to convert depending on visa status.</li>
+                    </ul>
+                </>
+            ),
+        },
+    ];
     return (
         <>
             <section className="relative bg-primary-800 py-12 md:py-24">
@@ -86,26 +143,58 @@ const Perth: React.FC = () => {
                         </motion.div>
                     ))}
                     </div>
-                    
-                    {/* <div className="container mx-auto py-6">
-                        <div className="flex flex-col md:flex-row border border-gray-400 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
-                            <img src="https://placehold.co/600x200.png" alt="Study Areas in Sydney" className="rounded-lg shadow-md" />
-                            <div className="bg-white p-8 md:w-1/2">
-                                <h3 className="text-2xl font-bold mb-4">Key Study Areas in Sydney</h3>
-                                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Business & Management:</strong> MBA, Finance, Marketing</li>
-                                    <li><strong>Engineering & IT:</strong> AI, Robotics, Data Science</li>
-                                    <li><strong>Health Sciences:</strong> Medicine, Nursing, Public Health</li>
-                                    <li><strong>Law & Social Sciences</strong></li>
-                                    <li><strong>Creative Arts & Design:</strong> UTS & UNSW are top-ranked</li>
-                                    <li><strong>Environmental Science & Sustainability</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> */}
-
+                   
                 </div>
             </motion.section>
+
+            <motion.section
+                className="py-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <img
+                    src="https://img.freepik.com/premium-photo/skyline-perth-by-swan-river-western-australia-wa-australia_1324215-159.jpg"
+                    alt="Info Visual"
+                    className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
+                />
+
+                <div>
+                    <div>
+                        <h4 className="text-4xl font-bold text-primary mb-8 text-left">Other's Information</h4>
+                    </div>
+                    <div className="space-y-4">
+                    {infoData.map((item, index) => (
+                        <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <button
+                            className="w-full flex items-center justify-between p-4 hover:bg-gray-100"
+                            onClick={() => toggle(index)}
+                        >
+                            <div className="flex items-center gap-3">
+                            {item.icon}
+                            <span className="text-base font-semibold">{item.title}</span>
+                            </div>
+                            <span className="text-xl">{expanded === index ? "−" : "+"}</span>
+                        </button>
+                        {expanded === index && (
+                            <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="p-4 pt-0 text-sm text-gray-700 leading-relaxed"
+                            >
+                            {item.content}
+                            </motion.div>
+                        )}
+                        </div>
+                    ))}
+                    </div>
+                </div>
+                </div>
+            </motion.section>  
+
         </>
     )
 }

@@ -1,15 +1,73 @@
-import React from 'react';
-import { CalendarDays, UserCheck, FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck } from 'lucide-react';
-import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
-import { Tab } from '@headlessui/react';
+import React, { useState } from 'react';
+import { ThermometerSun, Building2, BusFront, CarFront } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { universitiesBribane } from "../data/universities";
 
 const Brisbane: React.FC = () => {
+    const [expanded, setExpanded] = useState(null);
+    const toggle = (index: any) => {
+    setExpanded(expanded === index ? null : index);
+    };
     React.useEffect(() => {
         document.title = 'Student Visa Information | Study in Australia';
     }, []);
+
+    const infoData = [
+        {
+            title: "Climate",
+            icon: <ThermometerSun className="w-5 h-5 text-primary-600" />,
+            content:
+                "Subtropical – hot, humid summers (Dec–Feb, 21–30°C) and mild winters (Jun–Aug, 10–21°C). Summer storms and occasional flooding.",
+        },
+        {
+            title: "Working Culture",
+            icon: <Building2 className="w-5 h-5 text-primary-600" />,
+            content:
+                "Relaxed but professional – less formal than Sydney/Melbourne. Strong in construction, tourism, and healthcare. Business casual (short sleeves acceptable). Flexible hours (some workplaces offer 7 AM–3 PM to beat heat).",
+        },
+        {
+            title: "Public Transport",
+            icon: <BusFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Modes: Trains, trams, buses, ferries (limited). Managed by{" "}
+                        <strong>Public Transport Victoria (PTV)</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Trams: Largest network in the world (CBD-centric).</li>
+                        <li>Trains: 16 lines (radial from CBD).</li>
+                        <li>Buses: Fill gaps but less reliable.</li>
+                        <li>Smart Card: <strong>myki</strong>.</li>
+                        <li>Coverage: Excellent inner city, patchy outer suburbs.</li>
+                        <li>Pros: Frequent trams, 24-hour weekend trains/trams.</li>
+                        <li>Cons: Overcrowded peak trains, myki system criticized.</li>
+                    </ul>
+                </>
+            ),
+        },
+        {
+            title: "Driving & License Info",
+            icon: <CarFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Licensing handled by <strong>Department of Transport and Main Roads (TMR)</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Learner’s Permit (16+): Pass theory test.</li>
+                        <li>Hazard Perception Test (HPT): After 1 year (if under 25).</li>
+                        <li>Practical Test: Complete 100+ supervised hours (10 at night).</li>
+                        <li>P1 License (Red P): Must be 17+, valid for 1 year.</li>
+                        <li>P2 License (Green P): Valid for 2 years.</li>
+                        <li>Full License: Granted after completing P2.</li>
+                    </ul>
+                </>
+            ),
+        },
+    ];
 
     return (
         <>
@@ -85,27 +143,58 @@ const Brisbane: React.FC = () => {
                         </a>
                         </motion.div>
                     ))}
-                    </div>
-                    
-                    {/* <div className="container mx-auto py-6">
-                        <div className="flex flex-col md:flex-row border border-gray-400 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
-                            <img src="https://placehold.co/600x200.png" alt="Study Areas in Sydney" className="rounded-lg shadow-md" />
-                            <div className="bg-white p-8 md:w-1/2">
-                                <h3 className="text-2xl font-bold mb-4">Key Study Areas in Sydney</h3>
-                                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Business & Management:</strong> MBA, Finance, Marketing</li>
-                                    <li><strong>Engineering & IT:</strong> AI, Robotics, Data Science</li>
-                                    <li><strong>Health Sciences:</strong> Medicine, Nursing, Public Health</li>
-                                    <li><strong>Law & Social Sciences</strong></li>
-                                    <li><strong>Creative Arts & Design:</strong> UTS & UNSW are top-ranked</li>
-                                    <li><strong>Environmental Science & Sustainability</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> */}
-
-                </div>
+                    </div>                    
+               </div>
             </motion.section>
+
+            <motion.section
+                className="py-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <img
+                    src="https://cdn.britannica.com/58/74858-050-13370EC5/Brisbane-Queensland-Austl.jpg"
+                    alt="Info Visual"
+                    className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
+                />
+
+                <div>
+                    <div>
+                        {/* <span className="inline-block px-3 py-1 bg-primary-100 text-primary-800 font-medium rounded-full mb-3">Free Consultation</span> */}
+                        <h4 className="text-4xl font-bold text-primary mb-8 text-left">Other's Information</h4>
+                    </div>
+                    <div className="space-y-4">
+                    {infoData.map((item, index) => (
+                        <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <button
+                            className="w-full flex items-center justify-between p-4 hover:bg-gray-100"
+                            onClick={() => toggle(index)}
+                        >
+                            <div className="flex items-center gap-3">
+                            {item.icon}
+                            <span className="text-base font-semibold">{item.title}</span>
+                            </div>
+                            <span className="text-xl">{expanded === index ? "−" : "+"}</span>
+                        </button>
+                        {expanded === index && (
+                            <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="p-4 pt-0 text-sm text-gray-700 leading-relaxed"
+                            >
+                            {item.content}
+                            </motion.div>
+                        )}
+                        </div>
+                    ))}
+                    </div>
+                </div>
+                </div>
+            </motion.section>  
         </>
     )
 }

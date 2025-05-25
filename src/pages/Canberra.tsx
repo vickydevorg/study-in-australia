@@ -171,7 +171,7 @@ const Canberra: React.FC = () => {
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <img
             // src="https://cdn.uniacco.com/blog/wp-content/uploads/2020/12/09124125/srikant-sahoo-r2L6vCKaVRk-unsplash.jpg"
-            src="https://img.freepik.com/free-vector/canberra-australia-line-skyline-with-white-background-vector-illustration-business-travel-tourism-concept-with-modern-buildings-image-presentation-banner-website_596401-371.jpg"
+            src="https://www.australiaforeveryone.com.au/files/act/images/parliament-house4.jpg"
             alt="Info Visual"
             className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
         />

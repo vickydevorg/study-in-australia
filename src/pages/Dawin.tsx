@@ -1,15 +1,73 @@
-import React from 'react';
-import { CalendarDays, UserCheck, FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck } from 'lucide-react';
-import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
-import { Tab } from '@headlessui/react';
+import React, { useState } from 'react';
+import { ThermometerSun, Building2, BusFront, CarFront } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { universitiesdarwin } from "../data/universities";
 
 const Dawin: React.FC = () => {
+    const [expanded, setExpanded] = useState(null);
+    const toggle = (index: any) => {
+    setExpanded(expanded === index ? null : index);
+    };
     React.useEffect(() => {
         document.title = 'Student Visa Information | Study in Australia';
     }, []);
+
+    const infoData = [
+        {
+            title: "Climate",
+            icon: <ThermometerSun className="w-5 h-5 text-primary-600" />,
+            content:
+                "Tropical savanna – wet (Nov–Apr, 25–33°C, high humidity) and dry seasons (May–Oct, 21–32°C). Monsoonal rains and cyclones possible in wet season.",
+        },
+        {
+            title: "Working Culture",
+            icon: <Building2 className="w-5 h-5 text-primary-600" />,
+            content:
+                "Very casual and outdoorsy – shorts and shirts common. Tourism, mining, and Indigenous services are big employers. Early starts (7 AM–3 PM) to avoid heat. High turnover due to remote work (FIFO common).",
+        },
+        {
+            title: "Public Transport",
+            icon: <BusFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Modes: Buses only. Managed by{" "}
+                        <strong>Darwinbus</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>No trains, trams, or ferries.</li>
+                        <li>Smart Card: <strong>Tap & Ride</strong> card (or pay with cash).</li>
+                        <li>Coverage: Limited, mostly serves inner suburbs.</li>
+                        <li>Pros: Cheap, simple.</li>
+                        <li>Cons: Very infrequent, no Sunday services in some areas.</li>
+                    </ul>
+                </>
+            ),
+        },
+        {
+            title: "Driving & License Info",
+            icon: <CarFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Licensing handled by{" "}
+                        <strong>Department of Infrastructure, Planning and Logistics</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Learner’s Permit (16+): Pass theory test.</li>
+                        <li>Practical Driving Test: Must hold learner’s for 6 months (if under 25).</li>
+                        <li>P1 License (Red P): Valid for 1 year.</li>
+                        <li>P2 License (Green P): Valid for 2 years.</li>
+                        <li>Full License: After completing P2.</li>
+                        <li><strong>No minimum logbook hours required.</strong></li>
+                        <li><strong>Overseas license valid for 3 months before conversion.</strong></li>
+                    </ul>
+                </>
+            ),
+        }
+    ];
+    
     return (
         <>
             <section className="relative bg-primary-800 py-12 md:py-24">
@@ -20,7 +78,7 @@ const Dawin: React.FC = () => {
                 />
                 <div className="container relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"> Study in Dawin </h1>
+                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"> Study in Drawin </h1>
                         <p className="text-xl text-gray-100">
                             Melbourne is one of Australia’s most culturally and socially diverse cities with over 40% of its residents born overseas, and it's extremely linguistically diverse.
                         </p>
@@ -89,25 +147,57 @@ const Dawin: React.FC = () => {
                     ))}
                     </div>
                     
-                    {/* <div className="container mx-auto py-6">
-                        <div className="flex flex-col md:flex-row border border-gray-400 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
-                            <img src="https://placehold.co/600x200.png" alt="Study Areas in Sydney" className="rounded-lg shadow-md" />
-                            <div className="bg-white p-8 md:w-1/2">
-                                <h3 className="text-2xl font-bold mb-4">Key Study Areas in Sydney</h3>
-                                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Business & Management:</strong> MBA, Finance, Marketing</li>
-                                    <li><strong>Engineering & IT:</strong> AI, Robotics, Data Science</li>
-                                    <li><strong>Health Sciences:</strong> Medicine, Nursing, Public Health</li>
-                                    <li><strong>Law & Social Sciences</strong></li>
-                                    <li><strong>Creative Arts & Design:</strong> UTS & UNSW are top-ranked</li>
-                                    <li><strong>Environmental Science & Sustainability</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> */}
-
                 </div>
             </motion.section>
+
+            <motion.section
+                className="py-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <img
+                    src="https://cdn.britannica.com/36/165136-050-42FF0B8F/view-Darwin-Australia.jpg"
+                    alt="Info Visual"
+                    className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
+                />
+
+                <div>
+                    <div>
+                        <h4 className="text-4xl font-bold text-primary mb-8 text-left">Other's Information</h4>
+                    </div>
+                    <div className="space-y-4">
+                    {infoData.map((item, index) => (
+                        <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <button
+                            className="w-full flex items-center justify-between p-4 hover:bg-gray-100"
+                            onClick={() => toggle(index)}
+                        >
+                            <div className="flex items-center gap-3">
+                            {item.icon}
+                            <span className="text-base font-semibold">{item.title}</span>
+                            </div>
+                            <span className="text-xl">{expanded === index ? "−" : "+"}</span>
+                        </button>
+                        {expanded === index && (
+                            <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="p-4 pt-0 text-sm text-gray-700 leading-relaxed"
+                            >
+                            {item.content}
+                            </motion.div>
+                        )}
+                        </div>
+                    ))}
+                    </div>
+                </div>
+                </div>
+            </motion.section>  
+
         </>
     )
 }

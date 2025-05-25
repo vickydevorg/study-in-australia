@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { CalendarDays, UserCheck, FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck, ThermometerSun, Building2,BusFront, CarFront,Award,CalendarCheck2,HeartHandshake  } from 'lucide-react';
+import { FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck, ThermometerSun, Building2,BusFront, CarFront, Award } from 'lucide-react';
 import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
 import { Tab } from '@headlessui/react';
 import { motion } from 'framer-motion';
@@ -135,7 +135,7 @@ const Melbourne: React.FC = () => {
         <>
             <section className="relative bg-primary-800 py-12 md:py-24">
                 <img 
-                src="/images/MELBOURNE.png" 
+                src="https://cdn.britannica.com/09/93309-050-DCAC1FDB/bridge-Yarra-River-Melbourne.jpg" 
                 alt="Melbourne Skyline" 
                 className="absolute inset-0 w-full h-full object-cover opacity-30 "
                 />
@@ -181,57 +181,6 @@ const Melbourne: React.FC = () => {
                 </div>
             </section>
 
-            {/* <motion.section 
-                    className="relative bg-white py-16 md:py-12"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
-                <div className="container">
-                    <p className="text-xl text-gray-600 text-center pb-10">
-                        Melbourne is one of Australia’s most culturally and socially diverse cities with over 40% of its residents born overseas, and it's extremely linguistically diverse.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="card p-6 border border-gray-400 hover:shadow-md transition-shadow">
-                            <GraduationCap className="w-10 h-10 text-primary-600 mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Top Global Rankings</h3>
-                            <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                <li>#1 Student City in Australia, #5 in the world</li>
-                                <li>8th Safest City in the World</li>
-                                <li>Voted World’s Friendliest City</li>
-                                <li>Most Liveable City in Australia, #4 globally</li>
-                            </ul>
-                        </div>
-
-                        <div className="card p-6 border border-gray-400 hover:shadow-md transition-shadow">
-                            <CalendarDays className="w-10 h-10 text-primary-600 mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Things to Do</h3>
-                            <p className="text-gray-600 mb-2">
-                                From sports to arts, there’s always something happening in Melbourne:
-                            </p>
-                            <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                <li>Formula One Grand Prix, Boxing Day Test & Australian Open</li>
-                                <li>Music festivals, exhibitions, and cultural events</li>
-                            </ul>
-                            <p className="text-sm mt-2 text-primary-700 underline">
-                                <a href="https://whatson.melbourne.vic.gov.au" target="_blank">City of Melbourne's What’s On</a> |
-                                <a href="https://www.visitvictoria.com/whats-on" target="_blank" className="ml-1">Visit Victoria</a>
-                            </p>
-                        </div>
-
-                        <div className="card p-6 border border-gray-400 hover:shadow-md transition-shadow">
-                            <UserCheck className="w-10 h-10 text-primary-600 mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Student Support</h3>
-                            <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                <li>Free employment and accommodation legal advice</li>
-                                <li>Help understanding your rights and the law</li>
-                                <li>Support from Study Melbourne Hub and ISEALS</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </motion.section> */}
             
             <motion.section 
                 className="relative section bg-gray-50 py-12 md:py-12"
@@ -598,8 +547,7 @@ const Melbourne: React.FC = () => {
             >
                 <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <img
-                    // src="https://cdn.uniacco.com/blog/wp-content/uploads/2020/12/09124125/srikant-sahoo-r2L6vCKaVRk-unsplash.jpg"
-                    src="https://img.freepik.com/free-vector/melbourne-australia-skyline-vector-illustration-white-background-with-city-panorama-travel-picture-image-presentation-banner-placard-web-site_596401-632.jpg"
+                    src="https://cdn.britannica.com/09/93309-050-DCAC1FDB/bridge-Yarra-River-Melbourne.jpg"
                     alt="Info Visual"
                     className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
                 />

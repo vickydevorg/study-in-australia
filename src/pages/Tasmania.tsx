@@ -1,15 +1,73 @@
-import React from 'react';
-import { CalendarDays, UserCheck, FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck } from 'lucide-react';
-import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
-import { Tab } from '@headlessui/react';
+import React, { useState } from 'react';
+import { ThermometerSun, Building2, BusFront, CarFront } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { universitiestasmania } from "../data/universities";
 
 const Tasmania: React.FC = () => {
+    const [expanded, setExpanded] = useState(null);
+    const toggle = (index: any) => {
+    setExpanded(expanded === index ? null : index);
+    };
     React.useEffect(() => {
         document.title = 'Student Visa Information | Study in Australia';
     }, []);
+
+    const infoData = [
+        {
+            title: "Climate",
+            icon: <ThermometerSun className="w-5 h-5 text-primary-600" />,
+            content:
+                "Cool temperate oceanic – mild summers (Dec–Feb, 12–21°C) and cold winters (Jun–Aug, 3–11°C). Rainy year-round, can snow in highlands.",
+        },
+        {
+            title: "Working Culture",
+            icon: <Building2 className="w-5 h-5 text-primary-600" />,
+            content:
+                "Slow-paced and community-focused – small-town vibe. Key industries: agriculture, tourism, public sector. Business casual, very relaxed. 9 AM–5 PM standard, strong focus on work-life balance.",
+        },
+        {
+            title: "Public Transport",
+            icon: <BusFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Modes: Buses only. Managed by{" "}
+                        <strong>Metro Tasmania</strong> (Hobart, Launceston, Burnie).
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>No trains or trams.</li>
+                        <li>Smart Card: <strong>Greencard</strong> (Hobart only).</li>
+                        <li>Coverage: Poor – car-dependent city.</li>
+                        <li>Pros: Cheap fares.</li>
+                        <li>Cons: Infrequent services, limited routes.</li>
+                    </ul>
+                </>
+            ),
+        },
+        {
+            title: "Driving & License Info",
+            icon: <CarFront className="w-5 h-5 text-primary-600" />,
+            content: (
+                <>
+                    <p>
+                        Licensing handled by <strong>Service Tasmania</strong>.
+                    </p>
+                    <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Learner’s Permit (16+): Pass theory test.</li>
+                        <li>Practical Test: Must hold learner’s for 12 months (if under 25).</li>
+                        <li>P1 License (Red P): Valid for 1 year (must be 17+).</li>
+                        <li>P2 License (Green P): Valid for 2 years.</li>
+                        <li>Full License: Granted after completing P2.</li>
+                        <li>No minimum logbook hours required.</li>
+                        <li>Overseas license valid for 3 months.</li>
+                    </ul>
+                </>
+            ),
+        }
+    ];
+
+    
     return (
         <>
             <section className="relative bg-primary-800 py-12 md:py-24">
@@ -105,6 +163,54 @@ const Tasmania: React.FC = () => {
 
                 </div>
             </motion.section>
+
+            <motion.section
+                className="py-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <img
+                    src="https://tasmaniatours.com.au/wp-content/uploads/sites/2/2021/07/132779-56-scaled.jpg"
+                    alt="Info Visual"
+                    className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
+                />
+
+                <div>
+                    <div>
+                        <h4 className="text-4xl font-bold text-primary mb-8 text-left">Other's Information</h4>
+                    </div>
+                    <div className="space-y-4">
+                    {infoData.map((item, index) => (
+                        <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <button
+                            className="w-full flex items-center justify-between p-4 hover:bg-gray-100"
+                            onClick={() => toggle(index)}
+                        >
+                            <div className="flex items-center gap-3">
+                            {item.icon}
+                            <span className="text-base font-semibold">{item.title}</span>
+                            </div>
+                            <span className="text-xl">{expanded === index ? "−" : "+"}</span>
+                        </button>
+                        {expanded === index && (
+                            <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="p-4 pt-0 text-sm text-gray-700 leading-relaxed"
+                            >
+                            {item.content}
+                            </motion.div>
+                        )}
+                        </div>
+                    ))}
+                    </div>
+                </div>
+                </div>
+            </motion.section>  
         </>
     )
 }
