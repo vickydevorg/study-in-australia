@@ -90,95 +90,6 @@ const Sydney: React.FC = () => {
         },
     ];
 
-    const reasons = [
-        {
-            icon: <GraduationCap className="w-6 h-6" />,
-            title: "Top Global Rankings",
-            description:
-                "#2 Student City in Australia, Top 10 globally. Sydney is consistently ranked among the world’s safest and most beautiful cities. A leading hub for education and innovation with globally ranked universities.",
-        },
-        {
-            icon: <Award className="w-6 h-6" />,
-            title: "Things to Do",
-            description:
-                "Explore world-famous landmarks like the Sydney Opera House and Harbour Bridge. Enjoy Vivid Sydney, NYE fireworks, film and food festivals, beach culture, and major sporting events throughout the year.",
-        },
-        {
-            icon: <Briefcase className="w-6 h-6" />,
-            title: "Student Support",
-            description:
-                "Access free legal help, accommodation advice, and career workshops. Study NSW Hub offers community events, wellbeing support, and practical resources to help students thrive.",
-        }
-    ];
-
-    const careers = [
-        {
-            icon: <Briefcase className="w-6 h-6" />,
-            title: "Construction & Engineering",
-            description:
-                "Major projects like Sydney Metro and Western Sydney Airport are driving demand for civil engineers, electricians, and construction managers. Programs like the NSW Infrastructure Traineeship support graduate entry.",
-        },
-        {
-            icon: <Stethoscope className="w-6 h-6" />,
-            title: "Healthcare",
-            description:
-                "NSW needs registered nurses, aged care workers, and medical officers to support growing health needs in both urban and rural areas.",
-        },
-        {
-            icon: <BookOpen className="w-6 h-6" />,
-            title: "Education & Community Services",
-            description:
-                "There's strong demand for early childhood educators, school teachers, social workers, and aged & disability carers across the state.",
-        },
-        {
-            icon: <Laptop className="w-6 h-6" />,
-            title: "Business & Information Technology",
-            description:
-                "Sydney’s tech and business hub needs software developers, marketing professionals, cybersecurity analysts, and HR managers. ACS NSW supports young IT professionals.",
-        },
-    ];
-
-    const bubbleColors = [
-        "bg-blue-100 text-blue-600",
-        "bg-green-100 text-green-600",
-        "bg-rose-100 text-rose-600",
-        "bg-yellow-100 text-yellow-600",
-    ];
-
-    const borderColors = [
-        "border-blue-600",
-        "border-green-600",
-        "border-rose-600",
-        "border-yellow-500",
-    ];
-
-    const WorkingStudent = [
-        {
-            title: "Working on a Student Visa",
-            content:
-                "If you hold a Student (subclass 500) visa in Sydney, you're allowed to work up to 48 hours per fortnight during semesters, and unlimited hours during holidays. It’s important that part-time work doesn’t impact your studies—you must stay enrolled, attend classes regularly, and maintain good academic performance.",
-        },
-        {
-            title: "Opening a Bank Account",
-            content:
-                "To receive payments in Australia, you need a local bank account. You can open one online before arrival or visit a branch once you’re in Sydney.",
-        },
-        {
-            title: "Tax File Number (TFN)",
-            content:
-                "You must apply for a Tax File Number (TFN) to legally work in Sydney. Once you're in Australia, apply via the Australian Taxation Office. Staying over six months makes you a resident for tax purposes, meaning you must pay tax and file a student tax return yearly.",
-        },
-        {
-            title: "Police & Working with Children Checks",
-            content:
-                "Some jobs, especially in education or childcare, require background checks. A Police Check may be needed, and roles involving children will require a valid Working with Children Check for both paid and volunteer work.",
-        },
-        {
-            title: "Australian Business Number (ABN)",
-            content:
-                "You only need an ABN if you’re self-employed—like freelancing, delivery driving, or running a small business. Most student jobs don’t need one.",
-        },
-    ];
     const accommodationData = [
         {
             title: "Co-renting",
@@ -190,7 +101,7 @@ const Sydney: React.FC = () => {
                 "Conflicts should be resolved internally.",
                 "The landlord must be notified when a tenant joins or leaves.",
             ],
-            image : 'https://media.istockphoto.com/id/1320795558/photo/signing-on-the-agreement-term-of-car-rental-service-business-and-transportation-service.jpg?s=612x612&w=0&k=20&c=hc4z-DWUnx-O9u3AgtEQclZdFfWnO2Ch8heHJg5Q06U='
+            image: 'https://media.istockphoto.com/id/1320795558/photo/signing-on-the-agreement-term-of-car-rental-service-business-and-transportation-service.jpg?s=612x612&w=0&k=20&c=hc4z-DWUnx-O9u3AgtEQclZdFfWnO2Ch8heHJg5Q06U='
         },
         {
             title: "Sub-letting",
@@ -202,7 +113,7 @@ const Sydney: React.FC = () => {
                 "The main tenant handles repairs and rent.",
                 "Unauthorized sub-tenants can be removed.",
             ],
-            image : 'https://www.financialexpress.com/wp-content/uploads/2020/01/rent660.jpg?w=440'
+            image: 'https://www.financialexpress.com/wp-content/uploads/2020/01/rent660.jpg?w=440'
         },
         {
             title: "Bond & Responsibilities",
@@ -214,7 +125,7 @@ const Sydney: React.FC = () => {
                 "Incorrect handling may delay bond refunds.",
                 "Disputes can be taken to NSW Civil and Administrative Tribunal (NCAT).",
             ],
-            image : 'https://media.gettyimages.com/id/588263194/photo/fun-outdoors.jpg?s=612x612&w=gi&k=20&c=BWsmN7ENMg003ywW2eH5MU65qE8b1XFRu6ePUq3tC2Y='
+            image: 'https://media.gettyimages.com/id/588263194/photo/fun-outdoors.jpg?s=612x612&w=gi&k=20&c=BWsmN7ENMg003ywW2eH5MU65qE8b1XFRu6ePUq3tC2Y='
         },
     ]
 
@@ -237,53 +148,27 @@ const Sydney: React.FC = () => {
                 <div className="container">
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-1 bg-primary-100 text-primary-700 font-semibold rounded-full text-sm tracking-wide">
-                            Why Choose Sydney
+                            Why study in NSW 
                         </span>
                         <h2 className="mt-4 text-3xl md:text-4xl font-bold text-gray-800">
-                            A Global City Full of Opportunities
+                            Employability
                         </h2>
-                        <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-lg">
-                            Sydney is Australia’s most iconic and globally recognised city, with stunning natural beauty, rich culture, and a diverse international student community.
+                        <p className="mt-4 max-2xl mx-auto text-gray-600 text-lg">
+                            Education institutions in Sydney and NSW focus on developing practical skills, industry experience, and global qualifications to help students succeed in their careers. Courses are designed to be job-ready, with a strong emphasis on communication, networking, and entrepreneurial thinking. Students gain transferable skills, build valuable connections through internships and mentorships, and graduate with a globally recognised qualification.
+                            <br/><b className='text-primary-600'>NSW universities and training providers lead in student outcomes, preparing students for success now and in the future.</b>
                         </p>
                     </div>
-
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-                    >
-                        {reasons.map((reason, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
-                            >
-                                <div className="flex items-center justify-center w-14 h-14 mb-6 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 text-primary-700 text-2xl">
-                                    {reason.icon}
-                                </div>
-                                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                                    {reason.title}
-                                </h3>
-                                <p className="text-gray-600 text-base">{reason.description}</p>
-                            </motion.div>
-                        ))}
-                    </motion.div>
                 </div>
             </section>
 
-            <section className="bg-gray-50 py-10">
+            <section className="bg-gray-50">
                 <div className="container px-4 mx-auto">
                     <div className="text-center mb-14">
                         <span className="inline-block px-4 py-1 bg-primary-100 text-primary-700 font-semibold rounded-full text-sm tracking-wide">
-                            In-Demand Skills & Careers
+                            Go whale watching
                         </span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                            Explore Career Growth in Sydney
-                        </h2>
-                        <p className="text-gray-600 max-w-xl mx-auto mt-4">
-                            Sydney is a hotspot for high-demand careers in infrastructure, healthcare, tech, and education.
+                        <p className="text-gray-600 max-xl mx-auto mt-4">
+                            During May to November each year, the NSW coast is known as the “Humpback Highway''. You’re most likely to spot humpback and southern right whales, but you may see rarer species like orcas and blue whales. Stroll along cliff tops and lookouts or book a spot on a <a href='https://www.visitnsw.com/things-to-do/nature-and-parks/whale-watching' target='_blank' className='text-primary-600'><b>whale-watchingExternal Link</b> </a> cruise for a closer look.
                         </p>
                     </div>
 
@@ -294,25 +179,75 @@ const Sydney: React.FC = () => {
                         viewport={{ once: true, amount: 0.1 }}
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
                     >
-                        {careers.map((career, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className={`relative bg-white border-l-4 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 ${borderColors[index % borderColors.length]}`}
-                            >
-                                <div className="flex items-start gap-4">
-                                    <div className={`w-12 h-12 flex items-center justify-center rounded-full ${bubbleColors[index % bubbleColors.length]}`}>
-                                        {career.icon}
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                                            {career.title}
-                                        </h3>
-                                        <p className="text-gray-600 text-sm">{career.description}</p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
+
+                        <div className="relative bg-white border-l-4 border-red-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">South Coast</h3>
+                            <p className="text-gray-600 text-sm">
+                                Visit the <a href='https://www.visitnsw.com/destinations/south-coast/food-and-wine' target='_blank' className='text-primary-600'><b>South CoastExternal Link</b></a>  for all things seafood. There are so many local producers in this region and sample oysters, prawns, kingfish and tuna as you travel the coast. For a budget option, enjoy fresh takeaway fish and chips on the beach.
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-blue-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Cabramatta</h3>
+                            <p className="text-gray-600 text-sm">
+                                Famous for its Vietnamese restaurants, <a href='https://www.sydney.com/destinations/sydney/sydney-west/cabramatta' target='_blank' className='text-primary-600'><b>CabramattaExternal Link</b></a>  is home to some of Sydney’s best casual restaurants. Every local will have their own favourite spot for rich pho, filling banh mi or fresh goi cuon. If you’re not sure where to start, join a food tour of the area to learn more about its dishes and history.
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-green-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Hunter Valley</h3>
+                            <p className="text-gray-600 text-sm">
+                               The <a href='https://www.visitnsw.com/destinations/hunter/hunter-valley' target='_blank' className='text-primary-600'><b>Hunter Valley,External Link</b></a>  located in the <a href='https://www.study.nsw.gov.au/why-nsw/destinations/newcastle-and-hunter/' target='_blank' className='text-primary-600'><b>Hunter Region,</b></a> is best known as the birthplace of Australian wines. It’s also a go to for all things cheese and chocolate – there's even an annual Hunter Valley Cheese and Chocolate Festival!
+
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-yellow-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Ashfield</h3>
+                            <p className="text-gray-600 text-sm">
+                                Known as ‘Little Shanghai’, Ashfield in Sydney’s Inner West is the perfect place to try authentic Chinese dumplings, shallot pancakes, fried dough sticks and spring rolls. You can take a large group of friends to one of the area’s yum cha restaurants.
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-purple-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">North Coast – Woolgoolga</h3>
+                            <p className="text-gray-600 text-sm">
+                                <a href='https://www.visitnsw.com/destinations/north-coast/coffs-harbour-area/woolgoolga' target='_blank' className='text-primary-600'><b>WoolgoolaExternal Link</b></a>  on <a href='https://www.study.nsw.gov.au/why-nsw/destinations/north-coast/' target='_blank' className='text-primary-600'><b>NSW’s North Coast</b></a> is widely known for its blueberry industry. The area is full of blueberry farms you can visit. It’s also home to the annual Blues and Berries festival, where you can enjoy blueberry pie while listening to live blues music.
+
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-pink-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Leichhardt</h3>
+                            <p className="text-gray-600 text-sm">
+                                Sydney’s ‘Little Italy’, Leichhardt is the heart of NSW’s Italian community. Taste the delights of Italian-owned businesses along Norton Street. Enjoy an espresso, biscotti and cannoli from one of the many cafés or bakeries or take your friends out for pizza and pasta.
+
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-indigo-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Northern NSW</h3>
+                            <p className="text-gray-600 text-sm">
+                                 With its warmer weather, <a href='https://www.visitnsw.com/destinations/north-coast' target='_blank' className='text-primary-600'><b>Northern NSWExternal Link</b></a>  is ideal for growing fresh, tropical fruits and macadamia nuts. Look no further if you want to try Australia’s best avocado on toast. There are a range of local farmers markets you can visit so you can stock up on produce.
+
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-teal-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Young – Country NSW</h3>
+                            <p className="text-gray-600 text-sm">
+                                <a href='https://www.visitnsw.com/destinations/country-nsw/young-area/young' target='_blank' className='text-primary-600'><b>YoungExternal Link</b></a>  is Australia’s cherry capital. Located in <a href='https://www.study.nsw.gov.au/why-nsw/destinations/regional-nsw/' target='_blank' className='text-primary-600'><b>Country NSW,</b></a> this is a must-visit between late October and late January. During this time, you can try cherry picking and eat fresh fruit from the trees. There are over 20 stone fruit orchards to explore in the area, as well as the National Cherry Festival, held on the first weekend in December.
+                            </p>
+                        </div>
+
+                        <div className="relative bg-white border-l-4 border-red-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="text-xl font-semibold text-gray-900 mb-2">Parramatta</h3>
+                            <p className="text-gray-600 text-sm">
+                                Whether you're craving buttery, flaky naan bread straight from the tandoor, or a Goan prawn curry in a rich, spicy sauce, the vast array of eateries in <a href='https://atparramatta.com/discover/eat-and-drink/cheap-eats/five-unique-indian-eateries-in-parramatta' target='_blank' className='text-primary-600'><b>Parramatta's CBDExternal Link</b></a>  and surrounding neighbourhoods are ready to take your tastebuds on a journey.
+
+                            </p>
+                        </div>
+
                     </motion.div>
                 </div>
             </section>
@@ -382,36 +317,6 @@ const Sydney: React.FC = () => {
                 </div>
             </motion.section>
 
-            <section className="bg-gray-50 py-10">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="mb-14 text-center">
-                        <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium mb-2">
-                            Work & Compliance
-                        </span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                            Student Visa Info for Sydney
-                        </h2>
-                        <p className="text-gray-600 max-w-xl mx-auto mt-4">
-                            Everything international students need to know about working, banking, and legal requirements while living in Sydney.
-                        </p>
-                    </div>
-
-                    <div className="space-y-12">
-                        {WorkingStudent.map((step, index) => (
-                            <div key={index} className="relative pl-10">
-                            <div className="absolute left-0 top-1 text-white bg-teal-600 w-8 h-8 flex items-center justify-center rounded-full text-sm font-medium">
-                                {index + 1}
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                                {step.title}
-                            </h3>
-                                <p className="text-gray-600">{step.content}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             <section className="bg-gray-50 py-16">
                 <div className="container mx-auto px-4">
                     <div className="mb-14 text-center">
@@ -428,26 +333,26 @@ const Sydney: React.FC = () => {
 
                     <div className="grid md:grid-cols-2 gap-10 items-center">
                         {accommodationData.map((data,) => (
-                        <>
-                            <div>
-                                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                                    {data.title}
-                                </h2>
-                                <p className="text-gray-600 mb-6">{data.content}</p>
-                                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                                    {data.points.map((point, idx) => (
-                                        <li key={idx}>{point}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="overflow-hidden rounded-2xl shadow-md">
-                                <img
-                                src={data.image}
-                                alt="Student Accommodation in Sydney"
-                                className="w-full h-full object-cover"
-                                />
-                            </div>
-                        </>
+                            <>
+                                <div>
+                                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                                        {data.title}
+                                    </h2>
+                                    <p className="text-gray-600 mb-6">{data.content}</p>
+                                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                                        {data.points.map((point, idx) => (
+                                            <li key={idx}>{point}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="overflow-hidden rounded-2xl shadow-md">
+                                    <img
+                                        src={data.image}
+                                        alt="Student Accommodation in Sydney"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </>
                         ))}
                     </div>
                 </div>
@@ -504,29 +409,5 @@ const Sydney: React.FC = () => {
         </>
     );
 };
-
-// GraduationCap component
-interface GraduationCapProps extends React.SVGProps<SVGSVGElement> {
-    className?: string;
-}
-
-const GraduationCap: React.FC<GraduationCapProps> = ({ className = "", ...props }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-        {...props}
-    >
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-    </svg>
-);
 
 export default Sydney;

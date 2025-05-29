@@ -64,7 +64,7 @@ const Header: React.FC = () => {
         { name: 'Brisbane', path: '/brisbane' },
         { name: 'Adelaide', path: '/adelaide' },
         { name: 'Perth', path: '/perth' },
-        { name: 'Dawin', path: '/dawin' },
+        { name: 'Drawin', path: '/dawin' },
         { name: 'Tasmania', path: '/tasmania' },
         { name: 'Canberra', path: '/canberra' },
         { name: 'Contact Us', path: '/contact' },
