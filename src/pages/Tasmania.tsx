@@ -264,10 +264,10 @@ const Tasmania: React.FC = () => {
                             </div>
                         </div>
                     </div>
-					<p className="text-center text-lg font-semibold text-primary-800 mt-12">
-						Tasmania = Fresh air, fresh food, and fresh opportunities
-					</p>
                 </div>
+                <p className="text-center text-lg font-semibold text-primary-800 mt-12">
+                    Tasmania = Fresh air, fresh food, and fresh opportunities
+                </p>
             </motion.section>
             
             <motion.section

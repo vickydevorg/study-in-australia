@@ -12,7 +12,15 @@ const Perth: React.FC = () => {
     React.useEffect(() => {
         document.title = 'Student Visa Information | Study in Australia';
     }, []);
-
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
     const infoData = [
         {
             title: "Climate",
@@ -80,6 +88,113 @@ const Perth: React.FC = () => {
                     <div className="max-w-3xl mx-auto text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"> Study in Perth </h1>
                     </div>
+                </div>
+            </section>
+
+            <section className="section bg-white py-10">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-1 bg-primary-100 text-primary-700 font-semibold rounded-full text-sm tracking-wide">
+                            Places in Perth, Western Australia
+                        </span>
+                        <p className="mt-4 max-2xl mx-auto text-gray-600 text-lg">
+                            Perth, Australia’s sunniest capital city, blends urban sophistication with stunning natural beauty. From pristine beaches to lush parks and vibrant cultural hubs, here are the top places to explore:
+                        </p>
+                    </div>
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+                    >
+                        
+                        <div className="container">
+                            <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">🌊 Iconic Beaches & Waterfronts</h2>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li><strong>Cottesloe Beach</strong> – Perth’s most famous beach, perfect for swimming, sunsets, and the annual Sculpture by the Sea exhibition.</li>
+                                <li><strong>Scarborough Beach</strong> – A hotspot for surfers, with a buzzing esplanade full of bars and eateries.</li>
+                                <li><strong>Elizabeth Quay</strong> – A scenic waterfront precinct with dining, ferries to South Perth, and the stunning Spanda sculpture.</li>
+                                <li><strong>Swan River</strong> – Cruise, kayak, or cycle along Perth’s glittering river, with views of the city skyline.</li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div className="container">
+                            <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">🌿 Nature & Parks</h2>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li><strong>Kings Park & Botanic Garden</strong> – One of the world’s largest inner-city parks, offering bushwalking trails, wildflower displays, and panoramic views of Perth.</li>
+                                <li><strong>Rottnest Island</strong> – Meet the adorable quokkas, snorkel in turquoise waters, or bike around this car-free paradise.</li>
+                                <li><strong>Perth Zoo</strong> – Home to native Australian wildlife, including kangaroos, koalas, and Tasmanian devils.</li>
+                                <li><strong>John Forrest National Park</strong> – A great spot for hiking, waterfalls, and wild kangaroos (just 30 mins from the city).</li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div className="container">
+                            <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">🏛️ Culture & History</h2>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li><strong>Fremantle (Freo)</strong> – A historic port town with convict-built Fremantle Prison, lively markets, and craft breweries.</li>
+                                <li><strong>WA Museum Boola Bardip</strong> – A world-class museum showcasing Western Australia’s natural and cultural history.</li>
+                                <li><strong>Art Gallery of Western Australia</strong> – Features Indigenous art, contemporary works, and international exhibitions.</li>
+                                <li><strong>The Bell Tower</strong> – Climb this iconic landmark for views and try ringing the historic Swan Bells.</li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div className="container">
+                            <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">🛍️ Shopping & Entertainment</h2>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li><strong>Perth CBD (Murray & Hay Streets)</strong> – High-end shopping, laneway cafes, and street art.</li>
+                                <li><strong>Northbridge</strong> – Perth’s nightlife hub, with bars, live music, and multicultural dining.</li>
+                                <li><strong>Subiaco & Leederville</strong> – Trendy suburbs with boutique shops, brunch spots, and indie cinemas.</li>
+                                <li><strong>Perth Cultural Centre</strong> – A hub of galleries, theatres, and the State Library.</li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div className="container">
+                            <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">🚗 Day Trips from Perth</h2>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li><strong>The Pinnacles Desert</strong> – Otherworldly limestone formations in Nambung National Park.</li>
+                                <li><strong>Margaret River</strong> – Famous for wineries, caves, and surf beaches (3-hour drive).</li>
+                                <li><strong>Lancelin Sand Dunes</strong> – Try sandboarding on these massive white dunes.</li>
+                                <li><strong>Penguin Island</strong> – Spot wild penguins and dolphins (near Rockingham).</li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <div className="container">
+                            <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+                            <h2 className="text-2xl font-bold mb-4">🍽️ Food & Drink Hotspots</h2>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li><strong>Elizabeth Quay & Crown Perth</strong> – Fine dining with river views.</li>
+                                <li><strong>Fremantle Markets</strong> – Fresh produce, gourmet street food, and handmade crafts.</li>
+                                <li><strong>Swan Valley</strong> – WA’s oldest wine region, just 25 mins from Perth (wineries, breweries, and chocolate factories).</li>
+                            </ul>
+                            </div>
+                        </div>
+                        
+                    </motion.div>
+                </div>
+            </section>
+
+            <section id="tips" className="bg-primary-500 p-6 shadow-md space-y-3 section py-10 text-white text-center">
+                <div className="container">
+                    <h2 className="text-2xl font-bold">✈️ Quick Perth Travel Tips</h2>
+                    <ul className="list-disc pl-5 list-none">
+                    <li><strong>Best Time to Visit:</strong> Spring (Sep–Nov) for wildflowers or Autumn (Mar–May) for mild weather.</li>
+                    <li><strong>Getting Around:</strong> Free CAT buses in the city, trains to Fremantle, and ferries to Rottnest.</li>
+                    <li><strong>Must-Do:</strong> A sunset drink at Cottesloe Beach Hotel or a river cruise on the Swan River.</li>
+                    </ul>
+                    <p className="text-lg font-medium">
+                    Perth is a city of endless blue skies, golden beaches, and laid-back charm—ready for you to explore!
+                    </p>
                 </div>
             </section>
 
@@ -198,30 +313,5 @@ const Perth: React.FC = () => {
         </>
     )
 }
-
-
-// GraduationCap component
-interface GraduationCapProps extends React.SVGProps<SVGSVGElement> {
-    className?: string;
-}
-
-const GraduationCap: React.FC<GraduationCapProps> = ({ className = "", ...props }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-        {...props}
-    >
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-    </svg>
-);
 
 export default Perth;

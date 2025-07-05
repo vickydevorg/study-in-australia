@@ -112,43 +112,43 @@ const Adelaide: React.FC = () => {
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🎓 #1 Thrive in a City of Excellence</h3>
-                            <p>Study where Nobel Prize winners and world-class researchers began their journeys. Adelaide’s top-tier institutions and expert educators will help you achieve your goals.</p>
+                            <p>It’s inspiring to study in a place with such a strong tradition of excellence. A place that’s produced many Nobel Prize winners and world-renowned researchers. In Adelaide, no matter where you choose to study, you’re closer to the highly qualified teachers and lecturers who can help you achieve your goals</p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">💼 #2 Part-Time Jobs Made Easy</h3>
-                            <p>Score a job while you study! StudyAdelaide’s Job Shop connects international students with hundreds of local employers actively hiring.</p>
+                            <h3 className="text-xl font-semibold mb-2">💼 #2 Part-Time Jobs Made Easy</h3>  
+                            <p>We make it easier for students to get a part-time or casual job while they’re studying. StudyAdelaide has created Job Shop – an award-winning website dedicated to connecting internationalstudents with hundreds of job opportunities with businesses who are actively looking to employ them.</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">💰 #3 Affordable Living, Unforgettable Life</h3>
-                            <p>Enjoy one of Australia’s most budget-friendly cities! Save on accommodation, transport, and food—so you can spend more on experiences.</p>
+                            <p>Spend less on living expenses and more on enjoying life in Adelaide, one of the most affordable cities in Australia. In Adelaide, the cost of accommodation, transport and food is lower, and with major campuses, accommodation and workplaces clustered together, you will have more time and money to enjoy a balanced life. </p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🚀 #4 Clear Pathways to Success</h3>
-                            <p>Adelaide’s universities and colleges partner with global companies to create direct routes to your dream career.</p>
+                            <p>In Adelaide, you can make real progress towards your dream job as you study. Adelaide’s education providers work closely together to create pathways to employment for students. Adelaide’s universities, colleges and VET providers work with key employers – including major global companies – to connect students with their dream job.</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🚌 #5 Easy & Cheap Transport</h3>
-                            <p>Get 50% off public transport as an international student—plus free trams and buses in the city center!</p>
+                            <p>International students in Adelaide enjoy the same student discounts on public transport as local students. Which makes a 28-day pass for full time students 50% cheaper than a full fare pass! And there’s another bonus, there are also free trams and buses in the Adelaide city centre. </p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🤝 #6 A Welcoming Community</h3>
-                            <p>Join a multicultural hub where students from 130+ countries feel at home. Locals are friendly, and making friends is easy!</p>
+                            <p>Visitors say in Adelaide, people from all nations, cultures, and beliefs are warmly welcomed. We’re a close-knit, multicultural community, proud of our city and eager to share its wonders. You’ll find it’s quick to make friends with the locals, as well as other international students who come from more than 130 countries.  </p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🍴 #7 A Food Lover’s Paradise</h3>
-                            <p>From cheap eats to award-winning restaurants, Adelaide’s food scene rivals the world’s coolest cities.</p>
+                            <p>Adelaide’s vibrant city centre and cafe, restaurant and food scene is as exciting as some of the coolest cities in the world. The city centre features an amazing selection of restaurants and cafes with every kind of cuisine - from casual, affordable places perfect for students, to highly awarded, top end restaurants</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🎉 #8 Festivals & Fun All Year</h3>
-                            <p>With 400+ annual events (Fringe Festival, WOMADelaide, sports, and more), boredom doesn’t exist here!</p>
+                            <p>In Adelaide, you’re spoiled for choice with more than 400 festivals and events held every year in and around the city.  Adelaide Festival, Fringe Festival, the Tour Down Under, WOMADdelaide, Illuminate Adelaide, cricket, car racing, film festivals and OzAsia are just some of the amazing events you can enjoy.</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🌿 #9 Nature at Your Doorstep</h3>
-                            <p>Beaches, wildlife, wine regions, and the Outback are just a short trip away. Hello, kangaroos and sunsets!</p>
+                            <p>In Adelaide you’ll be surrounded by nature, with the parklands encircling the city centre. Within minutes you can soak up the sun on beautiful beaches, or see kangaroos and other wildlife in the rolling hills. It’s easy to get to some of the most spectacular Australian landscapes including our famous wine regions, the Flinders Ranges and Kangaroo Island.</p>
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold mb-2">🏢 #10 Global Companies Await</h3>
-                            <p>Microsoft, Tesla, Deloitte, and more call Adelaide home. Gain work experience and launch your career locally.</p>
+                            <p>Did you know Microsoft, Tesla and Deloitte all have offices in Adelaide? Or that some of the  iggest technology, engineering, renewable energy, resources and consulting businesses are here? Incredible work experience opportunities are everywhere. And most importantly, there is a clear pathway into your dream job after graduation. </p>
                         </div>
                     </div>
                     <div className="mt-12 text-center">

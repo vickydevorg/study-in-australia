@@ -12,6 +12,7 @@ import Perth from './pages/Perth';
 import Dawin from './pages/Dawin';
 import Tasmania from './pages/Tasmania';
 import Canberra from './pages/Canberra';
+import VisaInfo from './pages/VisaInfo';
 import StudentGuideAustralia from './pages/StudentGuideAustralia';
 
 function App() {
@@ -26,10 +27,11 @@ function App() {
                     <Route path="/brisbane" element={<Brisbane />} />
                     <Route path="/adelaide" element={<Adelaide />} />
                     <Route path="/perth" element={<Perth />} />
-                    <Route path="/dawin" element={<Dawin />} />
+                    <Route path="/darwin" element={<Dawin />} />
                     <Route path="/tasmania" element={<Tasmania />} />
                     <Route path="/canberra" element={<Canberra />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/visa-information" element={<VisaInfo />} />
                     <Route path="*" element={<NotFound />} />
                     <Route path="/student-guid-australia" element={<StudentGuideAustralia />} />
                 </Routes>

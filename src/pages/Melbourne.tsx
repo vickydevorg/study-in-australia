@@ -146,7 +146,7 @@ const Melbourne: React.FC = () => {
                 </div>
             </section>
 
-            <section className="section bg-gray-50">
+            <section className="section bg-white py-10">
                 <div className="container">
                     <div className="section-title">
                         <span className="inline-block px-3 py-1 bg-primary-100 text-primary-800 font-medium rounded-full mb-3">

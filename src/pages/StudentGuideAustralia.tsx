@@ -9,13 +9,13 @@ import {
 import { facts } from "../data/universities";
 
 const sections = [
-    {
-        title: "Health Insurance",
-        icon: <HeartPulse className="text-primary-600 w-6 h-6" />,
-        content:
-            "All international students in Australia must have Overseas Student Health Cover (OSHC). It helps cover doctor visits, hospital care, ambulance, and limited pharmaceuticals. OSHC must be arranged before arriving in Australia.",
-        image: "https://thumbs.dreamstime.com/b/health-insurance-concept-doodle-chart-keywords-icons-78777274.jpg",
-    },
+    // {
+    //     title: "Health Insurance",
+    //     icon: <HeartPulse className="text-primary-600 w-6 h-6" />,
+    //     content:
+    //         "All international students in Australia must have Overseas Student Health Cover (OSHC). It helps cover doctor visits, hospital care, ambulance, and limited pharmaceuticals. OSHC must be arranged before arriving in Australia.",
+    //     image: "https://thumbs.dreamstime.com/b/health-insurance-concept-doodle-chart-keywords-icons-78777274.jpg",
+    // },
     {
         title: "Travel Guide",
         icon: <Plane className="text-primary-600 w-6 h-6" />,
@@ -46,6 +46,107 @@ const sections = [
     },
 ];
 
+const data = {
+    providers: ["CBHS", "AHM", "NIB", "Worldcare", "Medibank", "Bupa"],
+    rows: [
+        {
+            title: "Price (Annual)",
+            values: ["$411.48", "$435.95", "$442.12", "$460.29", "$466.25", "$519.00"],
+        },
+        {
+            title: "Visa Compliance",
+            values: ["Yes", "Yes", "Yes", "Yes", "Yes", "Yes"],
+        },
+        {
+            title: "In-Hospital Treatment - Accommodation",
+            values: [
+                "All hospitals",
+                "All hospitals",
+                "Public & Agreement only",
+                "Public & Agreement only",
+                "All hospitals",
+                "Public & Agreement only",
+            ],
+        },
+        {
+            title: "In-Hospital Treatment - Doctor Services (MBS)",
+            values: ["100%", "100%", "100%", "100%", "100%", "100%"],
+        },
+        {
+            title: "Out-of-Hospital - GP Consultation",
+            values: [
+                "Agreement: 100% cost\nNon-Agreement: 100% MBS",
+                "100% MBS",
+                "100% MBS",
+                "100% MBS",
+                "100% MBS",
+                "100% MBS",
+            ],
+        },
+        {
+            title: "Out-of-Hospital - Telehealth",
+            values: ["100% MBS", "100% MBS", "100% MBS", "85% MBS", "100% MBS", "100% MBS"],
+        },
+        {
+            title: "Out-of-Hospital - Specialists",
+            values: ["85% MBS", "85% MBS", "85% MBS", "85% MBS", "85% MBS", "100% MBS"],
+        },
+        {
+            title: "Out-of-Hospital - Pathology/X-rays",
+            values: ["85% MBS", "85% MBS", "85% MBS", "85% MBS", "85% MBS", "100% MBS"],
+        },
+        {
+            title: "Prescription Medicines",
+            values: [
+                "$50/item limit, $31.60 co-pay",
+                "Same",
+                "Same",
+                "Same",
+                "$70/item limit, $31.60 co-pay",
+                "Same",
+            ],
+        },
+        {
+            title: "Annual Limit",
+            values: [
+                "$500 (individual), $1000 (family)",
+                "Same",
+                "Same",
+                "Same",
+                "Same",
+                "Same",
+            ],
+        },
+        {
+            title: "Waiting - Pre-existing Psychiatric",
+            values: ["2 months", "2 months", "2 months", "0 months", "0 months", "2 months (waived)"],
+        },
+        {
+            title: "Waiting - Pre-existing Conditions",
+            values: ["12 months", "12 months", "12 months", "12 months", "12 months", "12 months"],
+        },
+        {
+            title: "Waiting - Obstetrics",
+            values: ["12 months", "12 months", "12 months", "12 months", "12 months", "12 months"],
+        },
+        {
+            title: "Refund Policy",
+            values: ["Limited fees", "Limited fees", "No fees", "No fees", "Limited fees", "No fees"],
+        },
+        {
+            title: "Support Services",
+            values: [
+                "24/7 health & emergency line",
+                "24/7 health & emergency line",
+                "24/7 health line + in-person safety",
+                "24/7 virtual doctor visits",
+                "24/7 health & emergency line",
+                "24/7 student health line",
+            ],
+        },
+    ],
+};
+
 export default function StudentGuideAustralia() {
     return (
         <div className="bg-white">
@@ -67,6 +168,51 @@ export default function StudentGuideAustralia() {
             </section>
 
             {/* Essentials Section */}
+
+
+            <motion.section
+                className="py-24"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
+                <div className="container">
+                    <div className="overflow-x-auto text-center">
+                        <div className="flex items-center gap-4 py-5 text-center">
+                            <HeartPulse className="text-primary-600 w-6 h-6" />
+                            <h3 className="text-3xl font-semibold text-gray-900">
+                                Health Insurance
+                            </h3>
+                        </div>
+                        <table className="min-w-full border border-gray-300 text-sm">
+                            <thead className="bg-green-600 text-white sticky top-0 z-10">
+                                <tr>
+                                    <th className="p-3 text-left bg-green-700">Feature</th>
+                                    {data.providers.map((provider, i) => (
+                                    <th key={i} className="p-3 text-center border-l border-green-500">
+                                        {provider}
+                                    </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200 bg-white">
+                                {data.rows.map((row, i) => (
+                                    <tr key={i} className="hover:bg-green-50 transition duration-200">
+                                    <td className="p-3 font-medium text-gray-700 whitespace-pre-line">{row.title}</td>
+                                    {row.values.map((val, j) => (
+                                        <td key={j} className="p-3 text-center whitespace-pre-line">
+                                        {val}
+                                        </td>
+                                    ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </motion.section>
+
             <motion.section
                 className="py-24"
                 initial={{ opacity: 0 }}
@@ -105,6 +251,20 @@ export default function StudentGuideAustralia() {
                     ))}
                 </div>
             </motion.section>
+
+            <section id="tips" className="bg-primary-500 p-6 shadow-md space-y-3 section py-10 text-white text-center">
+                <div className="container">
+                    <h2 className="text-2xl font-bold">✈️ Key Takeaways</h2>
+                    <ul className="list-disc pl-5 list-none">
+                        <li><strong>Cheapest Option:</strong>CBHS ($411.48)</li>
+                        <li><strong>Best Hospital Coverage:</strong>CBHS, AHM, Medibank (all hospitals).</li>
+                        <li><strong>Best Specialist Coverage:</strong>Bupa (100% MBS).</li>
+                        <li><strong>No Waiting for Psychiatric:</strong>Worldcare & Medibank.</li>
+                        <li><strong>Higher Prescription Limit:</strong>Medibank ($70/item).</li>
+                    </ul>
+                </div>
+            </section>
+
             <section className="px-4 py-8 max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold text-center text-primary-700 mb-8">
                     🇦🇺 50 Amazing Facts About Australia

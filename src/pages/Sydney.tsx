@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ThermometerSun, Building2, BusFront, Briefcase, CarFront, Award, Stethoscope, BookOpen, Laptop } from 'lucide-react';
+import { ThermometerSun, Building2, BusFront, CarFront } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { universitiesSydney } from "../data/universities";
@@ -20,15 +20,6 @@ const Sydney: React.FC = () => {
             transition: {
                 staggerChildren: 0.1
             }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: { duration: 0.5 }
         }
     };
 
