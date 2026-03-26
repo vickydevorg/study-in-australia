@@ -43,7 +43,7 @@ const Sydney: React.FC = () => {
                 <>
                     <p>
                         Modes: Trains, buses, ferries, light rail. Managed by{" "}
-                        <strong>Transport for NSW</strong>.
+                        <strong><a href='https://www.transport.nsw.gov.au/' target='_blank' >Transport for NSW</a></strong>.
                     </p>
                     <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
                         <li>Trains: Extensive (Sydney Trains + intercity).</li>
@@ -64,7 +64,7 @@ const Sydney: React.FC = () => {
             content: (
                 <>
                     <p>
-                        Licensing handled by <strong>Service NSW</strong>.
+                        Licensing handled by <strong><a href='https://www.service.nsw.gov.au/' target='_blank'>Service NSW</a></strong>.
                     </p>
                     <ul className="list-disc list-inside mt-2 text-sm text-gray-600 space-y-1">
                         <li>Learner’s Permit (16+): Pass theory test.</li>
@@ -92,7 +92,7 @@ const Sydney: React.FC = () => {
                 "Conflicts should be resolved internally.",
                 "The landlord must be notified when a tenant joins or leaves.",
             ],
-            image: 'https://media.istockphoto.com/id/1320795558/photo/signing-on-the-agreement-term-of-car-rental-service-business-and-transportation-service.jpg?s=612x612&w=0&k=20&c=hc4z-DWUnx-O9u3AgtEQclZdFfWnO2Ch8heHJg5Q06U='
+            image: 'https://www.country-classics.com/hubfs/USE%20-%20Blog%20Featured%20Images-1.png'
         },
         {
             title: "Sub-letting",
@@ -116,21 +116,29 @@ const Sydney: React.FC = () => {
                 "Incorrect handling may delay bond refunds.",
                 "Disputes can be taken to NSW Civil and Administrative Tribunal (NCAT).",
             ],
-            image: 'https://media.gettyimages.com/id/588263194/photo/fun-outdoors.jpg?s=612x612&w=gi&k=20&c=BWsmN7ENMg003ywW2eH5MU65qE8b1XFRu6ePUq3tC2Y='
+            image: 'https://www.realpropertymgt.com/us/en-us/_assets/expert-tips/images/Keys-Transferred-Lease.jpg.webp'
         },
     ]
 
     return (
         <>
-            <section className="relative bg-primary-800 py-12 md:py-24">
+            <section className="relative bg-primary-900 py-12 md:py-24 overflow-hidden">
                 <img
-                    src="https://cdn.britannica.com/86/156586-050-EFB37140/Harbour-Bridge-Sydney.jpg"
+                    src="https://planetescape.pl//app/uploads/2018/03/Sydney_Banner.jpg"
                     alt="Melbourne Skyline"
-                    className="absolute inset-0 w-full h-full object-cover opacity-30 "
+                    className="absolute inset-0 w-full h-full object-cover brightness-75 saturate-125"
                 />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-900/85 via-primary-800/50 to-primary-700/40" />
                 <div className="container relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"> Study in Sydney </h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.2 }}
+                            className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)]"
+                        >
+                            Study in Sydney
+                        </motion.h1>
                     </div>
                 </div>
             </section>
@@ -171,73 +179,136 @@ const Sydney: React.FC = () => {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
                     >
 
-                        <div className="relative bg-white border-l-4 border-red-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-red-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">South Coast</h3>
                             <p className="text-gray-600 text-sm">
                                 Visit the <a href='https://www.visitnsw.com/destinations/south-coast/food-and-wine' target='_blank' className='text-primary-600'><b>South CoastExternal Link</b></a>  for all things seafood. There are so many local producers in this region and sample oysters, prawns, kingfish and tuna as you travel the coast. For a budget option, enjoy fresh takeaway fish and chips on the beach.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-blue-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-blue-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Cabramatta</h3>
                             <p className="text-gray-600 text-sm">
                                 Famous for its Vietnamese restaurants, <a href='https://www.sydney.com/destinations/sydney/sydney-west/cabramatta' target='_blank' className='text-primary-600'><b>CabramattaExternal Link</b></a>  is home to some of Sydney’s best casual restaurants. Every local will have their own favourite spot for rich pho, filling banh mi or fresh goi cuon. If you’re not sure where to start, join a food tour of the area to learn more about its dishes and history.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-green-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-green-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Hunter Valley</h3>
                             <p className="text-gray-600 text-sm">
                                The <a href='https://www.visitnsw.com/destinations/hunter/hunter-valley' target='_blank' className='text-primary-600'><b>Hunter Valley,External Link</b></a>  located in the <a href='https://www.study.nsw.gov.au/why-nsw/destinations/newcastle-and-hunter/' target='_blank' className='text-primary-600'><b>Hunter Region,</b></a> is best known as the birthplace of Australian wines. It’s also a go to for all things cheese and chocolate – there's even an annual Hunter Valley Cheese and Chocolate Festival!
 
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-yellow-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-yellow-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Ashfield</h3>
                             <p className="text-gray-600 text-sm">
                                 Known as ‘Little Shanghai’, Ashfield in Sydney’s Inner West is the perfect place to try authentic Chinese dumplings, shallot pancakes, fried dough sticks and spring rolls. You can take a large group of friends to one of the area’s yum cha restaurants.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-purple-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-purple-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">North Coast – Woolgoolga</h3>
                             <p className="text-gray-600 text-sm">
                                 <a href='https://www.visitnsw.com/destinations/north-coast/coffs-harbour-area/woolgoolga' target='_blank' className='text-primary-600'><b>WoolgoolaExternal Link</b></a>  on <a href='https://www.study.nsw.gov.au/why-nsw/destinations/north-coast/' target='_blank' className='text-primary-600'><b>NSW’s North Coast</b></a> is widely known for its blueberry industry. The area is full of blueberry farms you can visit. It’s also home to the annual Blues and Berries festival, where you can enjoy blueberry pie while listening to live blues music.
 
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-pink-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-pink-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Leichhardt</h3>
                             <p className="text-gray-600 text-sm">
                                 Sydney’s ‘Little Italy’, Leichhardt is the heart of NSW’s Italian community. Taste the delights of Italian-owned businesses along Norton Street. Enjoy an espresso, biscotti and cannoli from one of the many cafés or bakeries or take your friends out for pizza and pasta.
 
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-indigo-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-indigo-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Northern NSW</h3>
                             <p className="text-gray-600 text-sm">
                                  With its warmer weather, <a href='https://www.visitnsw.com/destinations/north-coast' target='_blank' className='text-primary-600'><b>Northern NSWExternal Link</b></a>  is ideal for growing fresh, tropical fruits and macadamia nuts. Look no further if you want to try Australia’s best avocado on toast. There are a range of local farmers markets you can visit so you can stock up on produce.
 
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-teal-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-teal-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Young – Country NSW</h3>
                             <p className="text-gray-600 text-sm">
                                 <a href='https://www.visitnsw.com/destinations/country-nsw/young-area/young' target='_blank' className='text-primary-600'><b>YoungExternal Link</b></a>  is Australia’s cherry capital. Located in <a href='https://www.study.nsw.gov.au/why-nsw/destinations/regional-nsw/' target='_blank' className='text-primary-600'><b>Country NSW,</b></a> this is a must-visit between late October and late January. During this time, you can try cherry picking and eat fresh fruit from the trees. There are over 20 stone fruit orchards to explore in the area, as well as the National Cherry Festival, held on the first weekend in December.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="relative bg-white border-l-4 border-red-500 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        <motion.div
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            whileHover={{ scale: 1.02, y: -2 }}
+                            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+                            className="relative bg-white border-l-4 border-red-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                        >
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">Parramatta</h3>
                             <p className="text-gray-600 text-sm">
                                 Whether you're craving buttery, flaky naan bread straight from the tandoor, or a Goan prawn curry in a rich, spicy sauce, the vast array of eateries in <a href='https://atparramatta.com/discover/eat-and-drink/cheap-eats/five-unique-indian-eateries-in-parramatta' target='_blank' className='text-primary-600'><b>Parramatta's CBDExternal Link</b></a>  and surrounding neighbourhoods are ready to take your tastebuds on a journey.
 
                             </p>
-                        </div>
+                        </motion.div>
 
                     </motion.div>
                 </div>
@@ -245,12 +316,14 @@ const Sydney: React.FC = () => {
 
 
             <motion.section
-                className="bg-primary-50 py-16"
+                className="relative bg-primary-50 py-16 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
+                <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-primary-200/50 blur-3xl"></div>
+                <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-pink-200/40 blur-3xl"></div>
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                         Top Universities & Master’s Programs
@@ -264,8 +337,13 @@ const Sydney: React.FC = () => {
                         {universitiesSydney.map((uni, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-white border border-gray-400 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden p-6"
-                                whileHover={{ scale: 1.03 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                whileHover={{ scale: 1.03, y: -2 }}
+                                whileTap={{ scale: 0.99 }}
+                                transition={{ duration: 0.35 }}
+                                className="bg-white border border-gray-300 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden p-6"
                             >
                                 <div className="flex items-center gap-2 mb-4">
                                     <HiOutlineAcademicCap className="text-primary-600 w-6 h-6" />
@@ -322,28 +400,41 @@ const Sydney: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-10 items-center">
-                        {accommodationData.map((data,) => (
-                            <>
-                                <div>
-                                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                                        {data.title}
-                                    </h2>
-                                    <p className="text-gray-600 mb-6">{data.content}</p>
+                    <div className="space-y-8">
+                        {accommodationData.map((data, index) => (
+                            <motion.article
+                                key={data.title}
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.35 }}
+                                whileHover={{ y: -3 }}
+                                transition={{ duration: 0.4 }}
+                                className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl overflow-hidden"
+                            >
+                                <motion.div
+                                    className={`md:w-5/12 h-56 md:h-64 relative overflow-hidden ${index % 2 === 1 ? 'md:order-2' : ''}`}
+                                    initial={{ scale: 1 }}
+                                    whileHover={{ scale: 1.03 }}
+                                    transition={{ duration: 0.4 }}
+                                >
+                                    <img
+                                        src={data.image}
+                                        alt={`Accommodation ${data.title}`}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                </motion.div>
+
+                                <div className="md:w-7/12 p-6">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">{data.title}</h3>
+                                    <p className="text-gray-600 mb-4">{data.content}</p>
                                     <ul className="list-disc list-inside space-y-2 text-gray-700">
                                         {data.points.map((point, idx) => (
                                             <li key={idx}>{point}</li>
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="overflow-hidden rounded-2xl shadow-md">
-                                    <img
-                                        src={data.image}
-                                        alt="Student Accommodation in Sydney"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </>
+                            </motion.article>
                         ))}
                     </div>
                 </div>
@@ -370,7 +461,15 @@ const Sydney: React.FC = () => {
                         </div>
                         <div className="space-y-4">
                             {infoData.map((item, index) => (
-                                <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 12 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    whileHover={{ scale: 1.01 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md"
+                                >
                                     <button
                                         className="w-full flex items-center justify-between p-4 hover:bg-gray-100"
                                         onClick={() => toggle(index)}
@@ -386,12 +485,13 @@ const Sydney: React.FC = () => {
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
                                             className="p-4 pt-0 text-sm text-gray-700 leading-relaxed"
                                         >
                                             {item.content}
                                         </motion.div>
                                     )}
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>

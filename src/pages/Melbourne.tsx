@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FileText, Stethoscope, Hammer, Briefcase, Banknote, ShieldCheck, ThermometerSun, Building2,BusFront, CarFront, Award } from 'lucide-react';
 import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
 import { Tab } from '@headlessui/react';
@@ -7,8 +7,8 @@ import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { universitiesMelbourne } from "../data/universities";
 
 const Melbourne: React.FC = () => {
-    const [expanded, setExpanded] = useState(null);
-    const toggle = (index: any) => {
+    const [expanded, setExpanded] = useState<number | null>(null);
+    const toggle = (index: number) => {
     setExpanded(expanded === index ? null : index);
     };
     React.useEffect(() => {
@@ -41,19 +41,19 @@ const Melbourne: React.FC = () => {
     const infoData = [
         {
             title: "Climate",
-            icon: <ThermometerSun className="w-5 h-5 text-primary-600" />,
+            icon: <ThermometerSun className="w-5 h-5 text-emerald-600" />,
             content:
             "Temperate oceanic – 'four seasons in one day.' Summers (Dec–Feb, 14–26°C), winters (Jun–Aug, 6–14°C). Unpredictable weather with rain, wind, and sudden changes.",
         },
         {
             title: "Working Culture",
-            icon: <Building2 className="w-5 h-5 text-primary-600" />,
+            icon: <Building2 className="w-5 h-5 text-emerald-600" />,
             content:
             "Fast-paced, corporate, and creative – finance, tech, and arts hub. Business formal in CBD, smart casual in startups. Longer hours in finance/law with some late finishes. Strong café culture – meetings often held at cafés.",
         },
         {
             title: "Public Transport",
-            icon: <BusFront className="w-5 h-5 text-primary-600" />,
+            icon: <BusFront className="w-5 h-5 text-emerald-600" />,
             content: (
             <>
                 <p>
@@ -74,7 +74,7 @@ const Melbourne: React.FC = () => {
         },
         {
             title: "Driving & License Info",
-            icon: <CarFront className="w-5 h-5 text-primary-600" />,
+            icon: <CarFront className="w-5 h-5 text-emerald-600" />,
             content: (
             <>
                 <p>
@@ -135,7 +135,7 @@ const Melbourne: React.FC = () => {
         <>
             <section className="relative bg-primary-800 py-12 md:py-24">
                 <img 
-                src="https://cdn.britannica.com/09/93309-050-DCAC1FDB/bridge-Yarra-River-Melbourne.jpg" 
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/75/b3/b3/glorious-fed-square.jpg" 
                 alt="Melbourne Skyline" 
                 className="absolute inset-0 w-full h-full object-cover opacity-30 "
                 />
@@ -146,10 +146,11 @@ const Melbourne: React.FC = () => {
                 </div>
             </section>
 
-            <section className="section bg-white py-10">
-                <div className="container">
+            <section className="relative overflow-hidden section bg-white py-14">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,_rgba(187,247,208,0.45),_transparent_26%)]" />
+                <div className="container relative">
                     <div className="section-title">
-                        <span className="inline-block px-3 py-1 bg-primary-100 text-primary-800 font-medium rounded-full mb-3">
+                        <span className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-800 font-medium rounded-full mb-3 shadow-sm">
                             Why Choose Melbourne
                         </span>
                         <p className="mt-4 max-w-2xl mx-auto text-gray-600">
@@ -168,13 +169,14 @@ const Melbourne: React.FC = () => {
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                className="card p-6 group hover:shadow-lg transition-shadow duration-300"
+                                whileHover={{ y: -6, scale: 1.01 }}
+                                className="rounded-3xl border border-emerald-100 bg-gradient-to-b from-white to-emerald-50/70 p-6 group shadow-sm hover:shadow-xl transition-all duration-300"
                             >
-                                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-100 text-primary-600 mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+                                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300 shadow-sm">
                                     {reason.icon}
                                 </div>
-                                <h3 className="text-xl font-semibold mb-3">{reason.title}</h3>
-                                <p className="text-gray-600">{reason.description}</p>
+                                <h3 className="text-xl font-semibold mb-3 text-slate-900">{reason.title}</h3>
+                                <p className="text-gray-600 leading-7">{reason.description}</p>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -183,24 +185,25 @@ const Melbourne: React.FC = () => {
 
             
             <motion.section 
-                className="relative section bg-gray-50 py-12 md:py-12"
+                className="relative overflow-hidden section bg-gradient-to-b from-emerald-50 via-white to-lime-50 py-14 md:py-14"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 >
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-8">In-Demand Skills & Careers</h2>
-                    <p className="text-xl text-gray-600 text-center mb-6">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,197,94,0.14),_transparent_24%)]" />
+                <div className="container relative">
+                    <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">In-Demand Skills & Careers</h2>
+                    <p className="text-xl text-gray-600 text-center mb-8">
                     According to the Jobs and Skills Report 2023 and Victorian Labour Market Report 2023, key industries with job opportunities include:
                     </p>
 
                     <Tab.Group>
-                    <Tab.List className="flex flex-wrap justify-center gap-4 border-b pb-4">
+                    <Tab.List className="flex flex-wrap justify-center gap-4 pb-4">
                         {visaTypes.map((visa, index) => (
                         <Tab key={index} className={({ selected }) =>
-                            `px-4 py-2 rounded-full text-sm font-medium transition ${
-                            selected ? 'bg-primary-700 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                            `px-5 py-2.5 rounded-full text-sm font-medium border transition shadow-sm ${
+                            selected ? 'bg-emerald-600 border-emerald-600 text-white' : 'bg-white border-emerald-100 text-slate-700 hover:bg-emerald-50'
                             }`
                         }>
                             {visa.name}
@@ -211,17 +214,21 @@ const Melbourne: React.FC = () => {
                     <Tab.Panels className="mt-8">
                         {visaTypes.map((visa, index) => (
                         <Tab.Panel key={index}>
-                            <div className="card overflow-hidden shadow-lg border border-gray-200 rounded-xl">
-                            <div className="p-5 bg-primary-700 text-white">
+                            <motion.div
+                            initial={{ opacity: 0, y: 18 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.35 }}
+                            className="overflow-hidden shadow-lg border border-emerald-100 rounded-3xl bg-white">
+                            <div className="p-6 bg-gradient-to-r from-emerald-600 to-green-500 text-white">
                                 <div className="flex items-center">
                                 {visa.icon}
                                 <h3 className="text-xl font-semibold ml-2">{visa.name}</h3>
                                 </div>
                             </div>
-                            <div className="p-5 bg-white">
-                                <p className="text-gray-700 mb-4">{visa.description}</p>
+                            <div className="p-6 bg-white">
+                                <p className="text-gray-700 leading-7 mb-4">{visa.description}</p>
                             </div>
-                            </div>
+                            </motion.div>
                         </Tab.Panel>
                         ))}
                     </Tab.Panels>
@@ -230,33 +237,36 @@ const Melbourne: React.FC = () => {
             </motion.section>
 
             <motion.section 
-                    className="relative bg-primary-50 py-12 md:py-6"
+                    className="relative overflow-hidden bg-gradient-to-r from-emerald-50 via-white to-lime-50 py-14 md:py-10"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                <div className="container text-center">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(34,197,94,0.12),_transparent_35%)]" />
+                <div className="container relative text-center">
                     <div className="flex justify-center mb-4">
-                        <HiOutlineBuildingOffice2 className="w-10 h-10 text-primary-600" />
+                        <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-md border border-emerald-100">
+                            <HiOutlineBuildingOffice2 className="w-10 h-10 text-emerald-600" />
+                        </div>
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                         Victoria’s Big Build
                     </h2>
-                    <p className="text-gray-700 mb-2 max-w-2xl mx-auto">
+                    <p className="text-gray-700 mb-2 max-w-2xl mx-auto leading-7">
                         Over <strong>180 major road and rail projects</strong> are transforming Victoria’s infrastructure.
                     </p>
-                    <p className="text-gray-700 mb-2 max-w-2xl mx-auto">
+                    <p className="text-gray-700 mb-2 max-w-2xl mx-auto leading-7">
                         The <strong>Graduate Program</strong> offers a <strong>2-year paid opportunity</strong> for university grads.
                     </p>
-                    <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+                    <p className="text-gray-700 mb-6 max-w-2xl mx-auto leading-7">
                         Open to <strong>international graduates</strong> with full work rights (e.g., Temporary Graduate Visa).
                     </p>
                     <a 
-                    href="https://bigbuild.vic.gov.au/about/graduate-program" 
+                    href="https://bigbuild.vic.gov.au" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="btn btn-primary"
+                    className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-white font-medium shadow-md transition hover:bg-emerald-700 hover:-translate-y-0.5"
                     >
                         Learn More About the Graduate Program
                     </a>
@@ -264,25 +274,28 @@ const Melbourne: React.FC = () => {
             </motion.section>
 
             <motion.section 
-                    className="relative bg-gray-50 py-12 px-6 md:px-16"
+                    className="relative overflow-hidden bg-white py-14 px-6 md:px-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-8">Working on a Student Visa</h2>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(220,252,231,0.95),_transparent_22%)]" />
+                <div className="max-w-6xl mx-auto relative">
+                    <h2 className="text-3xl font-bold text-center text-slate-900 mb-10">Working on a Student Visa</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-2 bg-purple-500"></div>
+                        <motion.div whileHover={{ y: -5 }} className="bg-gradient-to-b from-white to-emerald-50/70 rounded-3xl shadow-sm border border-emerald-100 overflow-hidden hover:shadow-xl transition-all">
+                            <div className="h-2 bg-emerald-500"></div>
                             <div className='p-5'>
                                 <div className="flex items-center mb-4">
-                                    <Briefcase className="text-green-600 mr-3" />
+                                    <div className="w-11 h-11 rounded-2xl bg-emerald-100 flex items-center justify-center mr-3">
+                                        <Briefcase className="text-emerald-600" />
+                                    </div>
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         Working on a Student Visa
                                     </h3>
                                 </div>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 leading-7">
                                     If you hold a Student (subclass 500) visa, you are permitted to work up to 48 hours
                                     per fortnight during the semester and unlimited hours during term breaks and holidays.
                                     This ensures that you can focus on your learning while gaining valuable work experience.
@@ -291,34 +304,38 @@ const Melbourne: React.FC = () => {
                                     requirements and maintain satisfactory academic results.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-2 bg-blue-500"></div>
+                        <motion.div whileHover={{ y: -5 }} className="bg-gradient-to-b from-white to-lime-50/80 rounded-3xl shadow-sm border border-emerald-100 overflow-hidden hover:shadow-xl transition-all">
+                            <div className="h-2 bg-lime-500"></div>
                             <div className='p-5'>
                                 <div className="flex items-center mb-4">
-                                    <Banknote className="text-green-600 mr-3" />
+                                    <div className="w-11 h-11 rounded-2xl bg-lime-100 flex items-center justify-center mr-3">
+                                        <Banknote className="text-emerald-600" />
+                                    </div>
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         Opening a Bank Account
                                     </h3>
                                 </div>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 leading-7">
                                     To be paid while working in Australia, you will need to open a bank account.
                                     You can open a bank account online before arriving in Australia or when you get here.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-2 bg-orange-500"></div>
+                        <motion.div whileHover={{ y: -5 }} className="bg-gradient-to-b from-white to-emerald-50/70 rounded-3xl shadow-sm border border-emerald-100 overflow-hidden hover:shadow-xl transition-all">
+                            <div className="h-2 bg-emerald-400"></div>
                             <div className='p-5'>
                                 <div className="flex items-center mb-4">
-                                    <FileText className="text-green-600 mr-3" />
+                                    <div className="w-11 h-11 rounded-2xl bg-emerald-100 flex items-center justify-center mr-3">
+                                        <FileText className="text-emerald-600" />
+                                    </div>
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         Tax File Number
                                     </h3>
                                 </div>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 leading-7">
                                 You will need to have a Tax File Number (TFN) to work while you are here.
                                     Once you have arrived, you can apply for a TFN through the Australian Taxation Office.
                                     If you are in Australia for more than six months, you will be considered a resident
@@ -326,18 +343,20 @@ const Melbourne: React.FC = () => {
                                     tax return each year.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-2 bg-pink-500"></div>
+                        <motion.div whileHover={{ y: -5 }} className="bg-gradient-to-b from-white to-lime-50/80 rounded-3xl shadow-sm border border-emerald-100 overflow-hidden hover:shadow-xl transition-all">
+                            <div className="h-2 bg-lime-400"></div>
                             <div className='p-5'>
                                 <div className="flex items-center mb-4">
-                                    <ShieldCheck className="text-green-600 mr-3" />
+                                    <div className="w-11 h-11 rounded-2xl bg-lime-100 flex items-center justify-center mr-3">
+                                        <ShieldCheck className="text-emerald-600" />
+                                    </div>
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         Police and Working with Children Checks
                                     </h3>
                                 </div>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 leading-7">
                                     For some jobs, you may be asked to provide a police check. This is a summary of
                                     your criminal history or involvement with the justice system.
                                     In jobs where you are in contact with children, such as education or childcare,
@@ -345,37 +364,40 @@ const Melbourne: React.FC = () => {
                                     employment, volunteering and internships.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <motion.div whileHover={{ y: -5 }} className="bg-gradient-to-b from-white to-emerald-50/70 rounded-3xl shadow-sm border border-emerald-100 overflow-hidden hover:shadow-xl transition-all">
                             <div className="h-2 bg-green-500"></div>
                             <div className='p-5'>
                                 <div className="flex items-center mb-4">
-                                    <ShieldCheck className="text-green-600 mr-3" />
+                                    <div className="w-11 h-11 rounded-2xl bg-emerald-100 flex items-center justify-center mr-3">
+                                        <ShieldCheck className="text-emerald-600" />
+                                    </div>
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         Australian Business Number
                                     </h3>
                                 </div>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 leading-7">
                                     Most students will not need an Australian Business Number (ABN) to work in Australia.
                                     You are only required to have an ABN if you run your own business or are an independent
                                     contractor (e.g. a freelancer, rideshare driver or food courier).
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </motion.section>
 
             <motion.section
-                className="bg-primary-50 py-16"
+                className="relative overflow-hidden bg-gradient-to-b from-emerald-50 via-white to-emerald-50 py-16"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 >
-                <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,_rgba(187,247,208,0.7),_transparent_24%)]" />
+                <div className="container relative mx-auto px-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
                     Top Universities & Master’s Programs
                     </h2>
                     <p className="text-xl text-gray-600 text-center mb-6">
@@ -387,14 +409,16 @@ const Melbourne: React.FC = () => {
                     {universitiesMelbourne && universitiesMelbourne.map((uni, index) => (
                         <motion.div
                         key={index}
-                        className="bg-white border border-gray-400 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden p-6"
-                        whileHover={{ scale: 1.03 }}
+                        className="bg-white border border-emerald-100 rounded-3xl shadow-sm hover:shadow-xl transition overflow-hidden p-6"
+                        whileHover={{ scale: 1.03, y: -4 }}
                         >
-                        <div className="flex items-center gap-2 mb-4">
-                            <HiOutlineAcademicCap className="text-primary-600 w-6 h-6" />
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-11 h-11 rounded-2xl bg-emerald-100 flex items-center justify-center">
+                                <HiOutlineAcademicCap className="text-emerald-600 w-6 h-6" />
+                            </div>
                             <h3 className="text-lg font-semibold">{uni.name}</h3>
                         </div>
-                        <p className="text-primary-700 text-sm font-semibold mb-2">{uni.ranking}</p>
+                        <p className="text-emerald-700 text-sm font-semibold mb-2">{uni.ranking}</p>
 
                         <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-1">Popular Master&apos;s Programs:</h4>
@@ -420,7 +444,7 @@ const Melbourne: React.FC = () => {
                             href={uni.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block w-full mt-4 bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center hover:bg-primary-700 transition"                        >
+                            className="block w-full mt-4 bg-emerald-600 text-white px-4 py-2.5 rounded-xl text-sm font-medium text-center hover:bg-emerald-700 transition"                        >
                             Visit Website
                         </a>
                         </motion.div>
@@ -447,128 +471,170 @@ const Melbourne: React.FC = () => {
                 </div>
             </motion.section>
 
-            <section className="bg-gray-50 py-12">
-                <div className="container mx-auto px-4">
+            <section className="relative overflow-hidden bg-white py-14">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(220,252,231,0.95),_transparent_24%)]" />
+                <div className="container relative mx-auto px-4">
                     {/* Title Section */}
                     <div className="text-center mb-10">
-                    <h2 className="text-4xl font-extrabold text-gray-800">Accommodation Options</h2>
+                    <h2 className="text-4xl font-extrabold text-slate-900">Accommodation Options</h2>
                     <p className="text-lg text-gray-600 mt-4">Understanding Co-renting and Sub-letting in Melbourne.</p>
                     </div>
 
-                    {/* Main Content */}
-                    <div className="space-y-8">
+                    <motion.div
+                        className="space-y-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <motion.div
+                            whileHover={{ y: -4, scale: 1.02 }}
+                            className="overflow-hidden rounded-[32px] border border-emerald-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+                        >
+                            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]">
+                            <div className="relative overflow-hidden min-h-[280px]">
+                                <img
+                                    src="https://www.colive.com/blog/wp-content/uploads/2019/01/coliving.webp"
+                                    alt="Co-renting"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105 hover:brightness-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/45 via-slate-900/10 to-transparent"></div>
+                                <div className="absolute bottom-6 left-6 max-w-lg text-white">
+                                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200">Accommodation in Melbourne</p>
+                                    <h3 className="mt-2 text-2xl font-bold">Co-renting</h3>
+                                </div>
+                            </div>
+                            <div className="p-6 md:p-8 bg-gradient-to-b from-white to-emerald-50/80">
+                                <p className="text-gray-700 leading-7 mb-4">
+                                    Co-renting (formerly co-tenancy) is when multiple individuals rent a property together, sharing the responsibilities of the lease. Each co-renter signs the rental agreement and is equally responsible for rent payments and property upkeep.
+                                </p>
+                                <ul className="mt-5 space-y-3 text-sm text-gray-700">
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">Co-renters are responsible for the rent and maintenance.</li>
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">Everyone must be listed on the rental agreement.</li>
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">Disagreements should be resolved directly between co-renters.</li>
+                                </ul>
+                                <p className="mt-5 text-sm text-gray-500">
+                                    Co-renters must ensure that the rental provider is notified when someone moves in or out to avoid complications.
+                                </p>
+                            </div>
+                            </div>
+                        </motion.div>
 
-                    {/* Co-renting Section */}
-                    <div className="flex flex-col md:flex-row md:space-x-8 items-center">
-                        <div className="flex-1">
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Co-renting</h3>
-                        <p className="text-gray-700 mb-4">
-                            Co-renting (formerly co-tenancy) is when multiple individuals rent a property together, sharing the responsibilities of the lease. Each co-renter signs the rental agreement and is equally responsible for rent payments and property upkeep.
-                        </p>
-                        <ul className="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Co-renters are responsible for the rent and maintenance.</li>
-                            <li>Everyone must be listed on the rental agreement.</li>
-                            <li>Disagreements should be resolved directly between co-renters.</li>
-                        </ul>
-                        <p className="text-sm text-gray-500 mt-4">
-                            Co-renters must ensure that the rental provider is notified when someone moves in or out to avoid complications.
-                        </p>
-                        </div>
-                        <div className="flex-1 mt-6 md:mt-0">
-                        <img src="https://placehold.co/400x200.png" alt="Co-renting" className="w-full h-auto rounded-lg shadow-md" />
-                        </div>
-                    </div>
+                        <motion.div
+                            whileHover={{ y: -4, scale: 1.02 }}
+                            className="overflow-hidden rounded-[32px] border border-emerald-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+                        >
+                            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]">
+                            <div className="relative overflow-hidden min-h-[280px]">
+                                <img
+                                    src="https://flatmates-res.cloudinary.com/image/upload/c_fill%2Cdpr_2.0%2Cf_auto%2Ch_342%2Cq_auto%2Cw_414/fskh9y7hrm4sec866ppl"
+                                    alt="Sub-letting"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105 hover:brightness-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/45 via-slate-900/10 to-transparent"></div>
+                                <div className="absolute bottom-6 left-6 max-w-lg text-white">
+                                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200">Accommodation in Melbourne</p>
+                                    <h3 className="mt-2 text-2xl font-bold">Sub-letting</h3>
+                                </div>
+                            </div>
+                            <div className="p-6 md:p-8 bg-gradient-to-b from-white to-lime-50/80">
+                                <p className="text-gray-700 leading-7 mb-4">
+                                    Sub-letting involves a tenant renting out their space to another person. This can only happen with the approval of the rental provider (landlord). The head renter remains responsible for the property, and sub-letting should be disclosed properly.
+                                </p>
+                                <ul className="mt-5 space-y-3 text-sm text-gray-700">
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">The head renter must obtain written permission from the rental provider.</li>
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">Sub-letting without permission can result in eviction.</li>
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">The head renter must manage all property maintenance and repairs.</li>
+                                </ul>
+                                <p className="mt-5 text-sm text-gray-500">
+                                    Sub-letting is not allowed unless the rental provider has given written consent. If a sub-renter is found without permission, they may be asked to vacate.
+                                </p>
+                            </div>
+                            </div>
+                        </motion.div>
 
-                    {/* Sub-letting Section */}
-                    <div className="flex flex-col md:flex-row md:space-x-8 items-center">
-                        <div className="flex-1">
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Sub-letting</h3>
-                        <p className="text-gray-700 mb-4">
-                            Sub-letting involves a tenant renting out their space to another person. This can only happen with the approval of the rental provider (landlord). The head renter remains responsible for the property, and sub-letting should be disclosed properly.
-                        </p>
-                        <ul className="list-disc list-inside text-gray-600 space-y-2">
-                            <li>The head renter must obtain written permission from the rental provider.</li>
-                            <li>Sub-letting without permission can result in eviction.</li>
-                            <li>The head renter must manage all property maintenance and repairs.</li>
-                        </ul>
-                        <p className="text-sm text-gray-500 mt-4">
-                            Sub-letting is not allowed unless the rental provider has given written consent. If a sub-renter is found without permission, they may be asked to vacate.
-                        </p>
-                        </div>
-                        <div className="flex-1 mt-6 md:mt-0">
-                        <img src="https://placehold.co/400x200.png" alt="Sub-letting" className="w-full h-auto rounded-lg shadow-md" />
-                        </div>
-                    </div>
-
-                    {/* Bond & Responsibilities Section */}
-                    <div className="flex flex-col md:flex-row md:space-x-8 items-center">
-                        <div className="flex-1">
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Bond & Responsibilities</h3>
-                        <p className="text-gray-700 mb-4">
-                            Both co-renters and sub-renters must ensure that the bond is paid and handled correctly. The head renter is responsible for managing bonds in sub-letting scenarios, while co-renters usually share a bond equally.
-                        </p>
-                        <ul className="list-disc list-inside text-gray-600 space-y-2">
-                            <li>The bond must be lodged with the Residential Tenancies Bond Authority (RTBA).</li>
-                            <li>Co-renters should transfer their bond portion if someone new moves in.</li>
-                            <li>Failure to properly handle the bond can result in delays during move-out and deductions.</li>
-                        </ul>
-                        <p className="text-sm text-gray-500 mt-4">
-                            If any disputes arise about the bond or property damage, co-renters or sub-renters can apply to VCAT (Victorian Civil and Administrative Tribunal) for resolution.
-                        </p>
-                        </div>
-                        <div className="flex-1 mt-6 md:mt-0">
-                        <img src="https://placehold.co/400x200.png" alt="Bond & Responsibilities" className="w-full h-auto rounded-lg shadow-md" />
-                        </div>
-                    </div>
-                    </div>
+                        <motion.div
+                            whileHover={{ y: -4, scale: 1.02 }}
+                            className="overflow-hidden rounded-[32px] border border-emerald-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+                        >
+                            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr]">
+                            <div className="relative overflow-hidden min-h-[280px]">
+                                <img
+                                    src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=900&q=80"
+                                    alt="Bond & Responsibilities"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105 hover:brightness-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/45 via-slate-900/10 to-transparent"></div>
+                                <div className="absolute bottom-6 left-6 max-w-lg text-white">
+                                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200">Accommodation in Melbourne</p>
+                                    <h3 className="mt-2 text-2xl font-bold">Bond & Responsibilities</h3>
+                                </div>
+                            </div>
+                            <div className="p-6 md:p-8 bg-gradient-to-b from-white to-emerald-50/80">
+                                <p className="text-gray-700 leading-7 mb-4">
+                                    Both co-renters and sub-renters must ensure that the bond is paid and handled correctly. The head renter is responsible for managing bonds in sub-letting scenarios, while co-renters usually share a bond equally.
+                                </p>
+                                <ul className="mt-5 space-y-3 text-sm text-gray-700">
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">The bond must be lodged with the Residential Tenancies Bond Authority (RTBA).</li>
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">Co-renters should transfer their bond portion if someone new moves in.</li>
+                                    <li className="rounded-2xl bg-white border border-emerald-100 px-4 py-3">Failure to properly handle the bond can result in delays during move-out and deductions.</li>
+                                </ul>
+                                <p className="mt-5 text-sm text-gray-500">
+                                    If any disputes arise about the bond or property damage, co-renters or sub-renters can apply to VCAT (Victorian Civil and Administrative Tribunal) for resolution.
+                                </p>
+                            </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Legal Insights Section */}
                     <div className="text-center mt-12">
-                    <h4 className="text-2xl font-semibold text-gray-800 mb-4">Legal Insights</h4>
-                    <p className="text-lg text-gray-600 mb-6">
-                        The Residential Tenancies Act 1997 provides comprehensive guidelines for both co-renting and sub-letting. It's important to understand your rights and responsibilities as a renter.
-                    </p>
-                    <ul className="list-disc list-inside text-gray-600 mx-auto space-y-2 text-left max-w-2xl">
-                        <li>Section 25: Notice of assignment or transfer by a renter.</li>
-                        <li>Section 81: Assignment and sub-letting by a renter.</li>
-                    </ul>
-                    <p className="text-sm text-gray-500 mt-4">
-                        Ensure compliance with the Act to avoid disputes and legal issues during your rental experience.
-                    </p>
+                        <h4 className="text-2xl font-semibold text-slate-900 mb-4">Legal Insights</h4>
+                        <p className="text-lg text-gray-600 mb-6">
+                            The Residential Tenancies Act 1997 provides comprehensive guidelines for both co-renting and sub-letting. It's important to understand your rights and responsibilities as a renter.
+                        </p>
+                        <ul className="list-disc list-inside text-gray-600 mx-auto space-y-2 text-left max-w-2xl">
+                            <li>Section 25: Notice of assignment or transfer by a renter.</li>
+                            <li>Section 81: Assignment and sub-letting by a renter.</li>
+                        </ul>
+                        <p className="text-sm text-gray-500 mt-4">
+                            Ensure compliance with the Act to avoid disputes and legal issues during your rental experience.
+                        </p>
                     </div>
                 </div>
             </section>
             <motion.section
-                className="py-16"
+                className="relative overflow-hidden py-16 bg-gradient-to-b from-white to-emerald-50/70"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
-                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(187,247,208,0.8),_transparent_20%)]" />
+                <div className="container relative mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <img
                     src="https://cdn.britannica.com/09/93309-050-DCAC1FDB/bridge-Yarra-River-Melbourne.jpg"
                     alt="Info Visual"
-                    className="w-full max-h-[400px] object-contain rounded-xl shadow-lg"
+                    className="w-full max-h-[400px] object-contain rounded-3xl shadow-xl border border-emerald-100"
                 />
 
                 <div>
                     <div>
                         {/* <span className="inline-block px-3 py-1 bg-primary-100 text-primary-800 font-medium rounded-full mb-3">Free Consultation</span> */}
-                        <h4 className="text-4xl font-bold text-primary mb-8 text-left">Other's Information</h4>
+                        <h4 className="text-4xl font-bold text-emerald-700 mb-8 text-left">Other's Information</h4>
                     </div>
                     <div className="space-y-4">
                     {infoData.map((item, index) => (
-                        <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <div key={index} className="border border-emerald-100 bg-white rounded-2xl overflow-hidden shadow-sm">
                         <button
-                            className="w-full flex items-center justify-between p-4 hover:bg-gray-100"
+                            className="w-full flex items-center justify-between p-4 hover:bg-emerald-50 transition-colors"
                             onClick={() => toggle(index)}
                         >
                             <div className="flex items-center gap-3">
                             {item.icon}
                             <span className="text-base font-semibold">{item.title}</span>
                             </div>
-                            <span className="text-xl">{expanded === index ? "−" : "+"}</span>
+                            <span className="text-xl">{expanded === index ? "-" : "+"}</span>
                         </button>
                         {expanded === index && (
                             <motion.div

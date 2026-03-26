@@ -1,10 +1,10 @@
 import React from 'react';
 import Hero from '../components/home/Hero';
-import WhyAustralia from '../components/home/WhyAustralia';
-import FeaturedUniversities from '../components/home/FeaturedUniversities';
-import StudyLevels from '../components/home/StudyLevels';
-import ApplicationGuide from '../components/home/ApplicationGuide';
-import Testimonials from '../components/home/Testimonials';
+import WhyStudyAustralia from '../components/home/WhyStudyAustralia';
+import ApplicationProcess from '../components/home/ApplicationProcess';
+import FinancialGuide from '../components/home/FinancialGuide';
+import LivingInAustralia from '../components/home/LivingInAustralia';
+import CricosGuide from '../components/home/CricosGuide';
 import ConsultationForm from '../components/home/ConsultationForm';
 
 const Home: React.FC = () => {
@@ -16,11 +16,11 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <WhyAustralia />
-      <FeaturedUniversities />
-      <StudyLevels />
-      <ApplicationGuide />
-      <Testimonials />
+      <WhyStudyAustralia />
+      <ApplicationProcess />
+      <FinancialGuide />
+      <LivingInAustralia />
+      <CricosGuide />
       <ConsultationForm />
     </>
   );

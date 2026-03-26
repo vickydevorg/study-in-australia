@@ -1,0 +1,328 @@
+{
+  "overview": {
+    "title": "Home Page Study Guide",
+    "summary": "This home page content brings together the main document checklist, visa finance requirements, English language guidance, OSHC information, pre-departure preparation, living in Australia guidance, and CRICOS course planning notes."
+  },
+  "applicationGuide": {
+    "hyperlinkLabel": "Detailed Application Guide",
+    "studentDocuments": [
+      "Passport bio pages",
+      "Updated resume",
+      "10th and 12th mark sheets",
+      "Undergraduate individual transcripts, provisional certificate, and degree certificate",
+      "Work experience documents such as offer letter and relieving letter",
+      "Last 6 months bank statement if salaried",
+      "Random 3 pay slips from any previous employer",
+      "Statement of Purpose or Genuine Student (GS) Statement if applicable",
+      "Academic verification links and credentials",
+      "Genuine Student (GS) Checklist"
+    ],
+    "parentsFinancialDocuments": [
+      "Last 6 months bank statement",
+      "ID proof such as Aadhaar or passport copy",
+      "Pay slips or offer letter if employed",
+      "GST certificate or registration certificate if self-employed"
+    ],
+    "additionalSponsorDocuments": [
+      "Second sponsor documents if applicable, including siblings, maternal or paternal grandparents, or paternal uncle or aunt",
+      "University GS forms and financial matrix",
+      "Letter of sponsorship and self-affidavit",
+      "CA report with UDIN",
+      "Name affidavit if required",
+      "Last 2 to 3 years of Income Tax Returns from sponsors"
+    ],
+    "availableFundsProof": [
+      "Education loan",
+      "Fixed Deposit (FD)",
+      "Bank statements",
+      "Fund verification emails officially from the bank"
+    ]
+  },
+  "financialRequirements": {
+    "title": "Financial Requirements for an Australian Student Visa (Subclass 500)",
+    "intro": "To apply for a Student Visa (Subclass 500), you must demonstrate sufficient funds to cover the key expenses connected to your study plan in Australia.",
+    "fundsRequired": [
+      "1 year living expenses: AUD 29,710 for the primary applicant",
+      "1 year tuition fees: proof of payment or capacity to pay the first year's tuition, or the full course fee if the course is shorter than a year",
+      "Travel expenses: AUD 2,000 for return airfare"
+    ],
+    "familyCosts": [
+      "Spouse or partner: add AUD 10,394 per year for living expenses",
+      "School-age child: add school tuition fees if enrolling in an Australian school"
+    ],
+    "alternativeIncomeProof": [
+      "Single applicant: parents or partner had a personal annual income of at least AUD 87,856 in the last 12 months",
+      "Applicant with family: parents or partner had a personal annual income of at least AUD 102,500 in the last 12 months"
+    ],
+    "incomeNotes": [
+      "If both parents are working, their combined income can be considered",
+      "Acceptable proof includes official government tax documents such as tax assessments",
+      "Bank statements or employer letters are not accepted as substitutes for annual income proof"
+    ],
+    "mandatoryCosts": [
+      "Visa application fee: AUD 2000, subject to change",
+      "Overseas Student Health Cover (OSHC): mandatory for the entire visa duration, roughly AUD 600 to AUD 1,500 per year"
+    ],
+    "reminders": [
+      "Funds must be genuinely available",
+      "Acceptable proof can include bank statements, loans, or scholarships"
+    ]
+  },
+  "englishLanguageRequirements": {
+    "title": "English Language Requirements",
+    "paragraphs": [
+      "An English language test score is required to apply for any program in Australia. It is a pre-condition for immigration and a mandatory requirement when applying for a student visa. Commonly accepted English proficiency tests for Australia include IELTS, TOEFL, and PTE Academic.",
+      "Each university sets its own English language requirements. Study Australia consultants explain the specific requirements in detail based on the chosen course. For many universities, the minimum requirement for undergraduate courses is an overall IELTS score of 6.0 with no band less than 5.5. For postgraduate courses, the minimum requirement is typically an overall IELTS score of 6.5 with no band below 6.0.",
+      "Students can apply to universities without submitting their English test scores initially. In such cases, they may receive a conditional offer letter stating the English language requirement. Once they submit the required scores, the university can issue a full offer letter. Study Australia consultants follow up with the universities and keep students updated throughout the process."
+    ]
+  },
+  "educationLoanAssistance": {
+    "title": "Education Loan Assistance",
+    "paragraphs": [
+      "Education loan support can be a vital part of financing study in Australia. We work with selected banks and financial institutions that provide education loans and help students connect with suitable providers based on their needs.",
+      "We also assist with documentation for applying for education loans. Leading public-sector options include State Bank of India (SBI), Andhra Bank, Indian Overseas Bank (IOB), Indian Bank, and other public-sector banks. Private banks and institutions include Axis Bank, ICICI Bank, HDFC Credila, and Avanse Education Loan.",
+      "In some public banks, unsecured loan availability may go up to 50 lakh depending on the student's academic profile and university choice. Top tier universities may help students qualify for public bank education loans starting around 8.25% interest. We also support CIBIL review and schemes such as Vidyalakshmi, which may not require sponsor income proof in some cases.",
+      "Study Australia consultants can also help students obtain the university documents required for loan processing."
+    ]
+  },
+  "oshc": {
+    "title": "OSHC Provider Comparison Table",
+    "providers": [
+      {
+        "provider": "Allianz Care",
+        "price": "$500 - $700",
+        "waitingPeriods": "12 months for pre-existing conditions",
+        "extrasCoverage": "Basic dental and optical",
+        "directBilling": "Yes",
+        "customerSupport": "24/7 multilingual"
+      },
+      {
+        "provider": "Bupa",
+        "price": "$450 - $650",
+        "waitingPeriods": "2 months for pre-existing conditions, 12 months for pregnancy",
+        "extrasCoverage": "Moderate dental and physio",
+        "directBilling": "Yes",
+        "customerSupport": "Online chat and phone"
+      },
+      {
+        "provider": "Medibank",
+        "price": "$480 - $680",
+        "waitingPeriods": "12 months for major claims",
+        "extrasCoverage": "Comprehensive dental and vision",
+        "directBilling": "Yes",
+        "customerSupport": "Student helpline"
+      },
+      {
+        "provider": "NIB",
+        "price": "$430 - $620",
+        "waitingPeriods": "2 months for mental health, 12 months for others",
+        "extrasCoverage": "Basic extras",
+        "directBilling": "Limited",
+        "customerSupport": "Email and phone"
+      },
+      {
+        "provider": "AHM",
+        "price": "$440 - $600",
+        "waitingPeriods": "12 months for pre-existing conditions",
+        "extrasCoverage": "Minimal extras",
+        "directBilling": "No",
+        "customerSupport": "Online portal"
+      }
+    ],
+    "keyNotes": [
+      "Prices vary based on single-year or multi-year plans and provider discounts",
+      "Waiting periods are commonly 12 months for pre-existing conditions or pregnancy, with shorter periods in some emergency-related cases",
+      "Extras such as dental, optical, and physio differ by provider, so compare based on your needs",
+      "Direct billing can reduce upfront hospital or clinic payments, depending on provider networks"
+    ],
+    "faqs": [
+      {
+        "question": "What is OSHC?",
+        "answer": "Overseas Student Health Cover (OSHC) is mandatory health insurance for international students in Australia. It covers medical treatments, hospital stays, and some prescriptions."
+      },
+      {
+        "question": "Why do I need OSHC?",
+        "answer": "OSHC is required for student visa subclass 500 compliance under Visa Condition 8501 and covers essential health services such as doctor visits and emergencies."
+      },
+      {
+        "question": "How long should my OSHC be valid?",
+        "answer": "It must cover your entire student visa duration, including the course length and any extra months if applicable."
+      },
+      {
+        "question": "Can I switch OSHC providers?",
+        "answer": "Yes, but you must maintain continuous coverage. Refunds may apply for unused months depending on the provider."
+      },
+      {
+        "question": "What is not covered by OSHC?",
+        "answer": "Pre-existing conditions may have waiting periods. Cosmetic procedures and non-essential treatments such as elective dental are generally excluded."
+      },
+      {
+        "question": "How do I claim medical expenses?",
+        "answer": "Use direct billing when the provider partners with the clinic or hospital, or submit receipts through the provider's app or portal for reimbursement."
+      },
+      {
+        "question": "Can I include family members in my OSHC?",
+        "answer": "Yes, but additional costs apply for dependents such as a spouse or children."
+      },
+      {
+        "question": "What if I do not get OSHC?",
+        "answer": "Your student visa can be refused because Australian immigration requires proof of OSHC for visa approval."
+      },
+      {
+        "question": "How do I purchase OSHC?",
+        "answer": "You can buy it through your university's recommended provider or directly from insurers such as Allianz or Bupa, and payment options vary by provider."
+      },
+      {
+        "question": "What if I extend my visa?",
+        "answer": "Renew OSHC before it expires to avoid visa complications."
+      }
+    ]
+  },
+  "preDepartureGuide": {
+    "title": "Pre-Departure Guide for Students Traveling to Australia",
+    "intro": "Congratulations on securing your student visa. This guide helps you organize travel, understand Australian customs, and settle in smoothly after arrival.",
+    "beforeYouDepart": {
+      "essentialDocumentsTitle": "Essential Documents",
+      "essentialDocumentsIntro": "Carry the following in your hand luggage as originals and keep photocopies in your check-in luggage:",
+      "essentialDocuments": [
+        "Valid passport with Australian student visa",
+        "Offer letter, Confirmation of Enrolment (CoE), and accommodation details",
+        "Receipts of tuition fees, health insurance (OSHC), and other payments",
+        "Attested academic certificates, work experience letters, and birth certificate",
+        "International driver's license if applicable",
+        "Prescriptions for medications if required",
+        "Emergency contact details for family and institution"
+      ],
+      "packingChecklistTitle": "Packing Checklist",
+      "packingChecklist": [
+        "Clothing and essentials for the weather, including bedsheets, towels, and toiletries",
+        "Electronics such as laptop and adapters. Australia uses 240V and Type I plugs",
+        "Avoid undeclared restricted food, plant, or animal products. Check Australian Border Force guidance"
+      ],
+      "moneyMattersTitle": "Money Matters",
+      "moneyMatters": [
+        "Carry around AUD 1,000 in cash or traveller's cheques for initial expenses",
+        "Avoid carrying large sums of cash and set up an Australian bank account after arrival"
+      ]
+    },
+    "arrivalInAustralia": {
+      "airportTitle": "At the Airport",
+      "airport": [
+        "Declare restricted items at customs and use the red channel if you are unsure",
+        "If airport pickup is arranged, your institution's representative may greet you"
+      ],
+      "firstStepsTitle": "First Steps",
+      "firstSteps": [
+        "Inform your family of your safe arrival",
+        "Attend orientation and collect your OSHC card"
+      ],
+      "healthSafetyTitle": "Health and Safety",
+      "healthSafety": [
+        "Activate your Overseas Student Health Cover immediately",
+        "Save local helplines, including 000 for emergencies"
+      ]
+    }
+  },
+  "livingInAustralia": {
+    "title": "Living in Australia",
+    "sections": [
+      {
+        "title": "Work Rights",
+        "items": [
+          "Part-time work: up to 20 hours per week during semesters and full-time during breaks",
+          "Tax File Number (TFN): required for employment and bank accounts. Apply through the ATO"
+        ]
+      },
+      {
+        "title": "Banking",
+        "items": [
+          "Open an account with a major bank such as Commonwealth or ANZ",
+          "Banking hours are commonly Monday to Thursday from 9:30 AM to 4 PM and Friday from 9:30 AM to 5 PM",
+          "ATMs and card payments through EFTPOS are widely accepted"
+        ]
+      },
+      {
+        "title": "Student Visa Rules",
+        "items": [
+          "Full-time enrollment is mandatory",
+          "Maintain 80% attendance",
+          "Report address changes or course transfers to Home Affairs",
+          "Do not overwork because breaching visa conditions can risk cancellation"
+        ]
+      },
+      {
+        "title": "Culture and Etiquette",
+        "items": [
+          "Australians value punctuality, equality, and informality",
+          "Queuing is customary in places like shops and transport",
+          "Respect diversity because Australia is multicultural with varied religions and languages"
+        ]
+      },
+      {
+        "title": "Study Tips",
+        "items": [
+          "Independent learning is important, with strong focus on research, discussion, and critical thinking",
+          "Continuous assessment is common, including essays, group projects, and presentations",
+          "Lecturers and tutors are approachable, so ask for help early"
+        ]
+      },
+      {
+        "title": "Need Help?",
+        "items": [
+          "Contact your institution's International Student Office",
+          "For visa queries, use the Department of Home Affairs",
+          "Welcome to Australia and all the best for your new journey"
+        ]
+      }
+    ]
+  },
+  "cricosGuide": {
+    "title": "Why CRICOS-Registered Courses Are Important",
+    "sections": [
+      {
+        "title": "Visa Compliance",
+        "items": [
+          "Only CRICOS-registered courses qualify for an Australian student visa",
+          "Non-CRICOS courses do not meet visa requirements and can risk rejection or cancellation"
+        ]
+      },
+      {
+        "title": "Quality Assurance",
+        "items": [
+          "CRICOS helps ensure institutions meet government standards in education, facilities, and student support",
+          "It protects students from fraudulent or substandard providers"
+        ]
+      },
+      {
+        "title": "Work Rights and Post-Study Benefits",
+        "items": [
+          "CRICOS enrollment is mandatory to access part-time work rights during study",
+          "It is also important for post-study work visa eligibility after graduation"
+        ]
+      },
+      {
+        "title": "Consumer Protection",
+        "items": [
+          "Tuition fees paid to CRICOS providers are safeguarded under the ESOS Act, including protection if an institution closes"
+        ]
+      }
+    ]
+  },
+  "studyDurationRule": {
+    "title": "Two Academic Years = 92 Weeks and 16 Months of Physical Presence",
+    "intro": "To qualify for post-study work rights or some skilled migration points, your course plan needs to meet both CRICOS duration and physical study expectations.",
+    "durationRequirement": [
+      "92 weeks of registered study on CRICOS",
+      "At least 16 months of physical stay in Australia, because courses finished too quickly may not count"
+    ],
+    "whyItMatters": [
+      "Post-Study Work Visa (PSWV): usually requires 2 or more years of CRICOS study for many Bachelor and Master pathways",
+      "Skilled migration: extra points may be available for 2 or more years of Australian study"
+    ],
+    "exceptions": [
+      "Online study does not count toward physical presence",
+      "Credit transfers may reduce total study duration, so confirm details with the institution"
+    ],
+    "keyTakeaway": "Always verify your course's CRICOS code and make sure your study plan aligns with the 92-week and 16-month rule when you are planning for visa benefits."
+  }
+}
