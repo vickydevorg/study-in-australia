@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -15,9 +16,31 @@ import Canberra from './pages/Canberra';
 import VisaInfo from './pages/VisaInfo';
 import StudentGuideAustralia from './pages/StudentGuideAustralia';
 
+function ScrollToTop() {
+    const { pathname, hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.replace('#', ''));
+
+            if (element) {
+                window.setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 0);
+                return;
+            }
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [pathname, hash]);
+
+    return null;
+}
+
 function App() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ScrollToTop />
             <Header />
             <main className="flex-grow">
                 <Routes>
